@@ -33,8 +33,8 @@ function init() {
     layers: [
       new ol.layer.Tile({
         source: new ol.source.OSM(),
-        zIndex: 1,
-        visible: true,
+        zIndex: 0,
+        visible: false,
       })
     ],
 
@@ -62,15 +62,38 @@ function init() {
         zIndex: 0,
         visible: false,
       }),
+      
+      // Bing Maps Basemap Layer
+      new ol.layer.Tile({
+        source: new ol.source.BingMaps({
+          key: "At4A89FmDbu18PRx__CW6sioCD6moSnOoLN80nRmVEWgnw4bQAZKGQY4W3CnTd-t",
+          imagerySet: 'AerialWithLabels' // Road, CanvasDark, CanvasGray, OrdnanceSurvey
+        }),
+        visible: false
+      })
     ],
   });
 
-  map.addLayer(layerGroup);
+  // CartoDB BaseMap Layer
+  const cartoDBBaseLayer = new ol.layer.Tile({
+    source: new ol.source.XYZ({
+      url: "https://{1-4}.basemaps.cartocdn.com/rastertiles/light_all/{z}/{x}/{y}{scale}.png"
+    }),
+    visible: false
+  })
 
+  // // TileDebug
+  // const tileDebugLayer = new ol.layer.Tile({
+  //   source: new ol.source.TileDebug(),
+  //   visible: false
+  // })
+  // map.addLayer(tileDebugLayer);
+  
+  
   // 마우스 클릭시 위치의 coordinate를 console.log
-  map.on("click", function (e) {
-    console.log(e.coordinate);
-  });
+  // map.on("click", function (e) {
+  //   console.log(e.coordinate);
+  // });
 
   // // 맵에서 마우스 위치에 따라 coordinate를 보여줌.
   // const popupContainerElement = document.getElementById("popup-coordinates");
