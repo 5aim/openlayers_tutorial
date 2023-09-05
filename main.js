@@ -1,9 +1,15 @@
 window.onload = init;
 
 function init() {
+  // Attribution Control
+  const attributionControl = new ol.control.Attribution({
+    collapsible: true
+  });
+  
+  // 천안시 기준 coordinate
   const CHEONAN = [14152187.20776864, 4413944.543811761];
 
-  // Controls
+  // 맵 컨트롤
   const fullscreenControl = new ol.control.FullScreen();
   const mousePositionControl = new ol.control.MousePosition();
   const overViewMapControl = new ol.control.OverviewMap({
@@ -14,10 +20,11 @@ function init() {
       }),
     ],
   });
-
+  
   const scaleLineControl = new ol.control.ScaleLine();
   const zoomSliderControl = new ol.control.ZoomSlider();
 
+  // Map Object
   const map = new ol.Map({
     // 뷰 지정
     view: new ol.View({
@@ -28,16 +35,6 @@ function init() {
       // cartesian coordinate system : 맵 범위 지정
       extent: [14136311.278827626, 4394656.463022412, 14174402.542814588, 4429267.881654042]
     }),
-
-    // 레이어 지정
-    layers: [
-      new ol.layer.Tile({
-        source: new ol.source.OSM(),
-        zIndex: 1,
-        visible: true,
-      })
-    ],
-
     // 컨트롤 지정
     target: "js-map",
     keyboardEventTarget: document,
@@ -51,104 +48,72 @@ function init() {
         zoomSliderControl,
       ]),
   });
+  
+  // Base Layers
+  // Openstreet Map Standard
+  const openstreetMapStandard = new ol.layer.Tile({
+    source: new ol.source.OSM(),
+    visible: true,
+    title: "OSMStandard"
+  });
+  
+  // Openstreet Map Humanitarian
+  const openstreetMapHumanitarian = new ol.layer.Tile({
+    source: new ol.source.OSM({
+      url: "https://{a-c}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png",
+    }),
+    visible: false,
+    title: "OSMHumanitarian"
+  });
 
-  // Layer Group
-  const layerGroup = new ol.layer.Group({
-    layers: [
-      new ol.layer.Tile({
-        source: new ol.source.OSM({
-          url: "https://{a-c}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png",
-        }),
-        visible: false
-      }),
-      
-      // Bing Maps Basemap Layer
-      new ol.layer.Tile({
-        source: new ol.source.BingMaps({
-          key: "At4A89FmDbu18PRx__CW6sioCD6moSnOoLN80nRmVEWgnw4bQAZKGQY4W3CnTd-t",
-          imagerySet: 'AerialWithLabels' // Road, CanvasDark, CanvasGray, OrdnanceSurvey
-        }),
-        visible: false
-      })
-    ],
+  // Bing Maps Basemap Layer
+  const bingMaps = new ol.layer.Tile({
+    source: new ol.source.BingMaps({
+      key: "At4A89FmDbu18PRx__CW6sioCD6moSnOoLN80nRmVEWgnw4bQAZKGQY4W3CnTd-t",
+      imagerySet: "CanvasGray" // Road, CanvasDark, CanvasGray
+    }),
+    visible: false,
+    title: "BingMaps"
   });
 
   // CartoDB BaseMap Layer
   const cartoDBBaseLayer = new ol.layer.Tile({
     source: new ol.source.XYZ({
-      url: "https://{1-4}.basemaps.cartocdn.com/rastertiles/light_all/{z}/{x}/{y}{scale}.png"
+      url: "https://{1-4}.basemaps.cartocdn.com/rastertiles/light_all/{z}/{x}/{y}{scale}.png",
+      attributions: "© CARTO"
     }),
-    visible: false
-  })
-
-  // // tile ArcGIS REST API Layer : not working. cause wrong url
-  // const tileArcGISLayer = new ol.layer.Tile({
-  //   source: new ol.source.TileArcGISRest({
-  //     url: "http://sampleserver1.arcgisonline.com/ArcGIS/rest/services/Demographics/ESRI_Population_World/MapServer"
-  //   }),
-  //   visible: false
-  // })
-  // map.addLayer(tileArcGISLayer);
-
-  // // NOAA WMS Layer
-  // const NOAAWMSLayer = new ol.layer.Tile({
-  //   source: new ol.source.TileWMS({
-  //     // Failed to load resource: the server responded with a status of 403 ()
-  //     url: 'https://nowcoast.noaa.gov/arcgis/services/nowcoast/anlaysis_meteohydro_sfc_qpe_time/MapServer/WMSServer?',
-  //     params: {
-  //       LAYERS: 1,
-  //       FORMAT: 'image/png',
-  //       TRANSPARENT: true
-  //     }
-  //   })
-  // })
-  // map.addLayer(NOAAWMSLayer);
-
-  // // TileDebug
-  // const tileDebugLayer = new ol.layer.Tile({
-  //   source: new ol.source.TileDebug(),
-  //   visible: false
-  // })
-  // map.addLayer(tileDebugLayer);
+    visible: false,
+    title: "CartoDarkAll"
+  });
   
-  // 마우스 클릭시 위치의 coordinate를 console.log
-  // map.on("click", function (e) {
-  //   console.log(e.coordinate);
-  // });
-
-  // // 맵에서 마우스 위치에 따라 coordinate를 보여줌.
-  // const popupContainerElement = document.getElementById("popup-coordinates");
-  // const popup = new ol.Overlay({
-  //     element : popupContainerElement,
-  //     positioning: 'top-left'
-  // })
-  // map.addOverlay(popup);
-
-  // map.on('click', function(e){
-  //     // console.log(e);
-  //     const clickedCoordinate = e.coordinate;
-  //     popup.setPosition(undefined);
-  //     popup.setPosition(clickedCoordinate);
-  //     popupContainerElement.innerHTML = clickedCoordinate;
-  // })
-
-  // // DragRotate Interaction
-  // const dragRotateInteraction = new ol.interaction.DragRotate({
-  //     condition : ol.events.condition.altKeyOnly
-  // })
-  // map.addInteraction(dragRotateInteraction)
-
-  // // Draw polygon
-  // const drawInteraction = new ol.interaction.Draw({
-  //     type: 'Polygon',
-  //     freehand: true
-  // })
-  // map.addInteraction(drawInteraction);
-
-  // // polygon의 coordinate를 추출하기
-  // drawInteraction.on('drawend', function(e){
-  //     let parser = new ol.format.GeoJSON();
-  //     let drawnFeatures = parser.writeFeatures([e.feature]);
-  //     console.log(drawnFeatures);
-  // })
+  // Layer Group
+  const baseLayerGroup = new ol.layer.Group({
+    layers: [
+      openstreetMapStandard,
+      openstreetMapHumanitarian,
+      bingMaps,
+      cartoDBBaseLayer
+    ]
+  });
+  map.addLayer(baseLayerGroup);
+  
+  // Layer Switcher Logic for BaseLayers
+  const baseLayerElements = document.querySelectorAll(
+    ".sidebar > input[type=radio]"
+  );
+  for (let baseLayerElement of baseLayerElements) {
+    baseLayerElement.addEventListener("change", function () {
+      let baseLayerElementValue = this.value;
+      baseLayerGroup.getLayers().forEach(function (element, index, array) {
+        let baseLayerName = element.get("title");
+        element.setVisible(baseLayerName === baseLayerElementValue);
+      });
+    });
+  }
+  
+  // TileDebug
+  const tileDebugLayer = new ol.layer.Tile({
+    source: new ol.source.TileDebug(),
+    visible: false
+  });
 }
