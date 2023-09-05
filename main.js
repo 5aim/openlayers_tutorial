@@ -33,8 +33,8 @@ function init() {
     layers: [
       new ol.layer.Tile({
         source: new ol.source.OSM(),
-        zIndex: 0,
-        visible: false,
+        zIndex: 1,
+        visible: true,
       })
     ],
 
@@ -59,8 +59,7 @@ function init() {
         source: new ol.source.OSM({
           url: "https://{a-c}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png",
         }),
-        zIndex: 0,
-        visible: false,
+        visible: false
       }),
       
       // Bing Maps Basemap Layer
@@ -81,6 +80,16 @@ function init() {
     }),
     visible: false
   })
+
+  // // tile ArcGIS REST API Layer : not working. cause wrong url
+  // const tileArcGISLayer = new ol.layer.Tile({
+  //   source: new ol.source.TileArcGISRest({
+  //     url: "http://sampleserver1.arcgisonline.com/ArcGIS/rest/services/Demographics/ESRI_Population_World/MapServer"
+  //   }),
+  //   visible: false
+  // })
+
+  // map.addLayer(tileArcGISLayer);
 
   // // TileDebug
   // const tileDebugLayer = new ol.layer.Tile({
