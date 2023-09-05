@@ -88,8 +88,21 @@ function init() {
   //   }),
   //   visible: false
   // })
-
   // map.addLayer(tileArcGISLayer);
+
+  // // NOAA WMS Layer
+  // const NOAAWMSLayer = new ol.layer.Tile({
+  //   source: new ol.source.TileWMS({
+  //     // Failed to load resource: the server responded with a status of 403 ()
+  //     url: 'https://nowcoast.noaa.gov/arcgis/services/nowcoast/anlaysis_meteohydro_sfc_qpe_time/MapServer/WMSServer?',
+  //     params: {
+  //       LAYERS: 1,
+  //       FORMAT: 'image/png',
+  //       TRANSPARENT: true
+  //     }
+  //   })
+  // })
+  // map.addLayer(NOAAWMSLayer);
 
   // // TileDebug
   // const tileDebugLayer = new ol.layer.Tile({
@@ -97,7 +110,6 @@ function init() {
   //   visible: false
   // })
   // map.addLayer(tileDebugLayer);
-  
   
   // 마우스 클릭시 위치의 coordinate를 console.log
   // map.on("click", function (e) {
@@ -110,7 +122,6 @@ function init() {
   //     element : popupContainerElement,
   //     positioning: 'top-left'
   // })
-
   // map.addOverlay(popup);
 
   // map.on('click', function(e){
@@ -125,7 +136,6 @@ function init() {
   // const dragRotateInteraction = new ol.interaction.DragRotate({
   //     condition : ol.events.condition.altKeyOnly
   // })
-
   // map.addInteraction(dragRotateInteraction)
 
   // // Draw polygon
