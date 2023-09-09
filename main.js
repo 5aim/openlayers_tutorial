@@ -166,12 +166,35 @@ function init() {
   //   title: 'NOAAWMSLayer'
   // })
 
+  // Vector Layers
+  // Cheonan 서북경찰서 앞 Line GeoJSON Vector Image Layer
+  const CheonanLineGeoJSONVectorImage = new ol.layer.VectorImage({
+    source: new ol.source.Vector({
+      url: './data/vector_data/line.geojson',
+      format: new ol.format.GeoJSON()
+    }),
+    visible: false,
+    title: 'CheonanLineGeoJSONVectorImage'
+  });
+
+  // KML Line 그리기
+  const CheonanLineKML = new ol.layer.Vector({
+    source: new ol.source.Vector({
+      url: './data/vector_data/line.kml',
+      format: new ol.format.KML()
+    }),
+    visible: false,
+    title: 'CheonanLineKML'
+  });
+
   // Raster Tile Layer Group
   const rasterTileLayerGroup = new ol.layer.Group({
     layers:[
       // tileArcGISLayer,
       // NOAAWMSLayer,
-      tileDebugLayer
+      tileDebugLayer,
+      CheonanLineGeoJSONVectorImage,
+      CheonanLineKML
     ]
   })
   map.addLayer(rasterTileLayerGroup);
@@ -185,6 +208,8 @@ function init() {
   //   }),
   //   title: 'openstreetMapFragmentStatic'
   // })
+
+  
 
     // Raster Tile Layer Group
     const rasterLayerGroup = new ol.layer.Group({

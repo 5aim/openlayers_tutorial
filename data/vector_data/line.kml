@@ -1,0 +1,45 @@
+<kml xmlns="http://www.opengis.net/kml/2.2"><Document>
+<Placemark>
+<ExtendedData></ExtendedData>
+  <Point><coordinates>127.13687288898137,36.85689104120742</coordinates></Point></Placemark>
+<Placemark>
+<ExtendedData></ExtendedData>
+  <Point><coordinates>127.13495537790459,36.856048268534835</coordinates></Point></Placemark>
+<Placemark>
+<ExtendedData></ExtendedData>
+  <Point><coordinates>127.12565099841606,36.85126698397886</coordinates></Point></Placemark>
+<Placemark>
+<ExtendedData></ExtendedData>
+  <LineString><coordinates>127.12581463142357,36.85129248621996
+127.12661055417027,36.851941864799414
+127.12758594969154,36.852684896983064
+127.1284521009137,36.85307202013375
+127.1309881384056,36.854189672986024
+127.1349585484968,36.855905588432606</coordinates></LineString></Placemark>
+<Placemark>
+<ExtendedData></ExtendedData>
+  <LineString><coordinates>127.13703109026187,36.856767888309065
+127.13512711820403,36.855956215470556</coordinates></LineString></Placemark>
+<Placemark>
+<ExtendedData></ExtendedData>
+  <LineString><coordinates>127.13734822983281,36.85691666012379
+127.14472348342645,36.860175701444675
+127.15051691464367,36.86278600476979</coordinates></LineString></Placemark>
+<Placemark>
+<ExtendedData></ExtendedData>
+  <LineString><coordinates>127.15053668744042,36.862896742658776
+127.14751144952078,36.861694436989865
+127.14381393650535,36.85993840392963
+127.13730877749128,36.8571065365491</coordinates></LineString></Placemark>
+<Placemark>
+<ExtendedData></ExtendedData>
+  <LineString><coordinates>127.13680522847488,36.85685162753549
+127.13505990858641,36.85611012254223</coordinates></LineString></Placemark>
+<Placemark>
+<ExtendedData></ExtendedData>
+  <LineString><coordinates>127.1347796881841,36.855923460119655
+127.13210492334741,36.85479498099812
+127.12806846004736,36.853063316845706
+127.12738761081692,36.85275200227619
+127.1268040257616,36.852323942672484
+127.1255799483223,36.85136188372354</coordinates></LineString></Placemark></Document></kml>
