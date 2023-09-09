@@ -152,6 +152,24 @@ function init() {
   })
   map.addLayer(rasterTileLayerGroup);
 
+  // Static Image OpenstreetMap
+  const openstreetMapFragmentStatic = new ol.layer.Image({
+    source: new ol.source.ImageStatic({
+      url: './data/static_images/openlayers_static_humanitarian.PNG',
+      imageExtent: [4991698.9328313675, 5050292.393744084, 10008191.828130603, 10013417.911357462],
+      attributions: '<a href=https://www.openstreetmap.org/copyright/>© OpenStreetMap contributors<a/>',
+    }),
+    title: 'openstreetMapFragmentStatic'
+  })
+
+    // Raster Tile Layer Group
+    const rasterLayerGroup = new ol.layer.Group({
+      layers:[
+        tileArcGISLayer, NOAAWMSLayer, tileDebugLayer, openstreetMapFragmentStatic
+      ]
+    })
+    map.addLayer(rasterLayerGroup);
+
   // Layer Switcher Logic for Raster Tile Layers
   const tileRasterLayerElements = document.querySelectorAll('.sidebar > input[type=checkbox]');
   for(let tileRasterLayerElement of tileRasterLayerElements){
@@ -167,5 +185,6 @@ function init() {
       this.checked ? tileRasterLayer.setVisible(true) : tileRasterLayer.setVisible(false)
     })
   }
+  
 }
 
