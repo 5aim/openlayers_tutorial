@@ -30,10 +30,10 @@ function init() {
     view: new ol.View({
       center: CHEONAN,
       zoom: 13,
-      maxZoom: 17,
-      minZoom: 13,
+      maxZoom: 19,
+      minZoom: 2,
       // cartesian coordinate system : 맵 범위 지정
-      extent: [14136311.278827626, 4394656.463022412, 14174402.542814588, 4429267.881654042]
+      // extent: [14136311.278827626, 4394656.463022412, 14174402.542814588, 4429267.881654042]
     }),
     // 컨트롤 지정
     target: "js-map",
@@ -67,32 +67,54 @@ function init() {
   });
 
   // Bing Maps Basemap Layer
-  const bingMaps = new ol.layer.Tile({
-    source: new ol.source.BingMaps({
-      key: "At4A89FmDbu18PRx__CW6sioCD6moSnOoLN80nRmVEWgnw4bQAZKGQY4W3CnTd-t",
-      imagerySet: "CanvasGray" // Road, CanvasDark, CanvasGray
-    }),
-    visible: false,
-    title: "BingMaps"
-  });
+  // const bingMaps = new ol.layer.Tile({
+  //   source: new ol.source.BingMaps({
+  //     key: "At4A89FmDbu18PRx__CW6sioCD6moSnOoLN80nRmVEWgnw4bQAZKGQY4W3CnTd-t",
+  //     imagerySet: "CanvasGray" // Road, CanvasDark, CanvasGray
+  //   }),
+  //   visible: false,
+  //   title: "BingMaps"
+  // });
 
   // CartoDB BaseMap Layer
-  const cartoDBBaseLayer = new ol.layer.Tile({
-    source: new ol.source.XYZ({
-      url: "https://{1-4}.basemaps.cartocdn.com/rastertiles/light_all/{z}/{x}/{y}{scale}.png",
-      attributions: "© CARTO"
+  // const cartoDBBaseLayer = new ol.layer.Tile({
+  //   source: new ol.source.XYZ({
+  //     url: "https://{1-4}.basemaps.cartocdn.com/rastertiles/light_all/{z}/{x}/{y}{scale}.png",
+  //     attributions: "© CARTO"
+  //   }),
+  //   visible: false,
+  //   title: "CartoDarkAll"
+  // });
+  
+  // Base Vector Layers
+  // Vector Tile Layer OpenstreetMap
+  const openstreetMapVectorTile = new ol.layer.VectorTile({
+    source: new ol.source.VectorTile({
+      url:'https://api.maptiler.com/tiles/v3-openmaptiles/{z}/{x}/{y}.pbf?key=Pdeq7Zb4DwT20I3CUwy6',
+      format: new ol.format.MVT(),
+      attributions: '<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>'
     }),
     visible: false,
-    title: "CartoDarkAll"
-  });
+    title: 'VectorTileLayerOpenstreetMap'
+  })
   
-  // Layer Group
+  const openstreetMapVectorTileStyle = `https://api.maptiler.com/maps/ffe0b296-112d-4317-b0f5-0b55572d881e/style.json?key=Pdeq7Zb4DwT20I3CUwy6`;
+  
+  fetch(openstreetMapVectorTileStyle).then(function(response) {
+    response.json().then(function(glStyle) {
+      olms.applyStyle(openstreetMapVectorTile, glStyle, 'v3-openmaptiles');
+    });
+  });
+
+
+  // Base Layer Group
   const baseLayerGroup = new ol.layer.Group({
     layers: [
       openstreetMapStandard,
       openstreetMapHumanitarian,
-      bingMaps,
-      cartoDBBaseLayer
+      // bingMaps,
+      // cartoDBBaseLayer,
+      openstreetMapVectorTile
     ]
   });
   map.addLayer(baseLayerGroup);
@@ -119,53 +141,58 @@ function init() {
   });
 
   // tile ArcGIS REST API Layer
-  const tileArcGISLayer = new ol.layer.Tile({
-    source: new ol.source.TileArcGISRest({
-      url: "http://sampleserver1.arcgisonline.com/ArcGIS/rest/services/Louisville/LOJIC_LandRecords_Louisville/MapServer",
-      attributions: 'Copyright© 2008, MSD, PVA, Louisville Water Company, Louisville Metro Government'
-    }),
-    visible: true,
-    title: 'TileArcGISLayer'
-  })
+  // const tileArcGISLayer = new ol.layer.Tile({
+  //   source: new ol.source.TileArcGISRest({
+  //     url: "http://sampleserver1.arcgisonline.com/ArcGIS/rest/services/Louisville/LOJIC_LandRecords_Louisville/MapServer",
+  //     attributions: 'Copyright© 2008, MSD, PVA, Louisville Water Company, Louisville Metro Government'
+  //   }),
+  //   visible: true,
+  //   title: 'TileArcGISLayer'
+  // })
   
 
   // NOAA WMS Layer
-  const NOAAWMSLayer = new ol.layer.Tile({
-    source: new ol.source.TileWMS({
-      url:'https://nowcoast.noaa.gov/arcgis/services/nowcoast/forecast_meteoceanhydro_sfc_ndfd_dailymaxairtemp_offsets/MapServer/WMSServer?',
-      params:{
-        LAYERS: 5,
-        FORMAT: 'image/png',
-        TRANSPARENT: true
-      },
-      attributions: '<a href=https://nowcoast.noaa.gov/>© NOAA<a/>'
-    }),
-    visible: true,
-    title: 'NOAAWMSLayer'
-  })
+  // const NOAAWMSLayer = new ol.layer.Tile({
+  //   source: new ol.source.TileWMS({
+  //     url:'https://nowcoast.noaa.gov/arcgis/services/nowcoast/forecast_meteoceanhydro_sfc_ndfd_dailymaxairtemp_offsets/MapServer/WMSServer?',
+  //     params:{
+  //       LAYERS: 5,
+  //       FORMAT: 'image/png',
+  //       TRANSPARENT: true
+  //     },
+  //     attributions: '<a href=https://nowcoast.noaa.gov/>© NOAA<a/>'
+  //   }),
+  //   visible: true,
+  //   title: 'NOAAWMSLayer'
+  // })
 
   // Raster Tile Layer Group
   const rasterTileLayerGroup = new ol.layer.Group({
     layers:[
-      tileArcGISLayer, NOAAWMSLayer, tileDebugLayer
+      // tileArcGISLayer,
+      // NOAAWMSLayer,
+      tileDebugLayer
     ]
   })
   map.addLayer(rasterTileLayerGroup);
 
   // Static Image OpenstreetMap
-  const openstreetMapFragmentStatic = new ol.layer.Image({
-    source: new ol.source.ImageStatic({
-      url: './data/static_images/openlayers_static_humanitarian.PNG',
-      imageExtent: [4991698.9328313675, 5050292.393744084, 10008191.828130603, 10013417.911357462],
-      attributions: '<a href=https://www.openstreetmap.org/copyright/>© OpenStreetMap contributors<a/>',
-    }),
-    title: 'openstreetMapFragmentStatic'
-  })
+  // const openstreetMapFragmentStatic = new ol.layer.Image({
+  //   source: new ol.source.ImageStatic({
+  //     url: './data/static_images/openlayers_static_humanitarian.PNG',
+  //     imageExtent: [4991698.9328313675, 5050292.393744084, 10008191.828130603, 10013417.911357462],
+  //     attributions: '<a href=https://www.openstreetmap.org/copyright/>© OpenStreetMap contributors<a/>',
+  //   }),
+  //   title: 'openstreetMapFragmentStatic'
+  // })
 
     // Raster Tile Layer Group
     const rasterLayerGroup = new ol.layer.Group({
       layers:[
-        tileArcGISLayer, NOAAWMSLayer, tileDebugLayer, openstreetMapFragmentStatic
+        // tileArcGISLayer,
+        // NOAAWMSLayer, 
+        tileDebugLayer, 
+        // openstreetMapFragmentStatic
       ]
     })
     map.addLayer(rasterLayerGroup);

@@ -16,14 +16,15 @@
                 <h2>Base Layers</h2>
                 <input type="radio" name='baseLayerRadioButton' value='OSMStandard' checked>OSM Standard<br>
                 <input type="radio" name='baseLayerRadioButton' value='OSMHumanitarian'>OSM Humanitarian<br>
-                <input type="radio" name='baseLayerRadioButton' value='BingMaps'>Bing Maps<br>
-                <input type="radio" name='baseLayerRadioButton' value='CartoDarkAll'>Carto Dark All<br>
+                <input type="radio" name='baseLayerRadioButton' value='BingMaps'>Bing Maps X<br>
+                <input type="radio" name='baseLayerRadioButton' value='CartoDarkAll'>Carto Dark All X<br>
+                <input type="radio" name='baseLayerRadioButton' value='VectorTileLayerOpenstreetMap'>VectorTile Layer OpenstreetMap<br>
 
                 <h2>Layers</h2>
-                <input type="checkbox" name="rasterTileLayerCheckbox" value="TileArcGISLayer">Tile ArcGIS Layer<br>
-                <input type="checkbox" name="rasterTileLayerCheckbox" value="NOAAWMSLayer">NOAA WMS Layer<br>
+                <input type="checkbox" name="rasterTileLayerCheckbox" value="TileArcGISLayer">Tile ArcGIS Layer X<br>
+                <input type="checkbox" name="rasterTileLayerCheckbox" value="NOAAWMSLayer">NOAA WMS Layer X<br>
                 <input type="checkbox" name="rasterTileLayerCheckbox" value="TileDebugLayer">Tile Debug Layer<br>
-                <input type="checkbox" name='rasterLayerCheckbox' value='openstreetMapFragmentStatic' checked>OpenstreetMap Humanitarian Fragment Static<br>
+                <input type="checkbox" name='rasterLayerCheckbox' value='openstreetMapFragmentStatic'>OpenstreetMap Humanitarian Fragment Static X<br>
             </div>
         </div>
         <div class="grid-2">
@@ -37,6 +38,7 @@
     </div>
 
     <script src="./libs/v6.1.1-dist/ol.js"></script>
+    <script src="https://unpkg.com/ol-mapbox-style@9.4.0/dist/olms.js"></script>
     <script src="./main.js"></script>
 </body>
 
