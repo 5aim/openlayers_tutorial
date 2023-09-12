@@ -33,7 +33,7 @@ function init() {
       maxZoom: 19,
       minZoom: 2,
       // cartesian coordinate system : 맵 범위 지정
-      // extent: [14136311.278827626, 4394656.463022412, 14174402.542814588, 4429267.881654042]
+      extent: [14136311.278827626, 4394656.463022412, 14174402.542814588, 4429267.881654042]
     }),
     // 컨트롤 지정
     target: "js-map",
@@ -167,34 +167,49 @@ function init() {
   // })
 
   // Vector Layers
-  // Cheonan 서북경찰서 앞 Line GeoJSON Vector Image Layer
-  const CheonanLineGeoJSONVectorImage = new ol.layer.VectorImage({
+  // Cheonan Link Line GeoJSON Vector Image Layer
+  const CheonanLinkListVectorImage = new ol.layer.VectorImage({
     source: new ol.source.Vector({
-      url: './data/vector_data/line.geojson',
+      url: './data/vector_data/link_list.geojson',
       format: new ol.format.GeoJSON()
     }),
     visible: false,
-    title: 'CheonanLineGeoJSONVectorImage'
+    title: 'CheonanLinkList'
   });
 
   // KML Line 그리기
-  const CheonanLineKML = new ol.layer.Vector({
-    source: new ol.source.Vector({
-      url: './data/vector_data/line.kml',
-      format: new ol.format.KML()
-    }),
-    visible: false,
-    title: 'CheonanLineKML'
-  });
+  // const CheonanLineKML = new ol.layer.Vector({
+  //   source: new ol.source.Vector({
+  //     url: './data/vector_data/line.kml',
+  //     format: new ol.format.KML()
+  //   }),
+  //   visible: false,
+  //   title: 'CheonanLineKML'
+  // });
 
-  // Raster Tile Layer Group
+  // Node List
+  const nodeListPoint = new ol.layer.Heatmap({
+    source: new ol.source.Vector({
+      url: './data/vector_data/node_list.geojson',
+      format: new ol.format.GeoJSON()
+    }),
+    radius: 12,
+    blur: 0,
+    // [1] : 블러색, [2],[3] : 바깥색 [4] : 안쪽색
+    gradient: ['#00f', '#0ff', '#000000', '#000000', '#000000'],
+    title: 'CheonanNodeListPoint',
+    visible: false
+  });
+  
+  // Layer Group
   const rasterTileLayerGroup = new ol.layer.Group({
     layers:[
       // tileArcGISLayer,
       // NOAAWMSLayer,
       tileDebugLayer,
-      CheonanLineGeoJSONVectorImage,
-      CheonanLineKML
+      CheonanLinkListVectorImage,
+      // CheonanLineKML,
+      nodeListPoint
     ]
   })
   map.addLayer(rasterTileLayerGroup);
