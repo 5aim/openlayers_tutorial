@@ -167,6 +167,22 @@ function init() {
   // })
 
   // Vector Layers
+  // Styling of vector features
+  // Style for Polygons
+  const fillStyle = new ol.style.Fill({
+    color: [40, 119, 247, 1]
+  })
+
+  // Style for Lines
+  const strokeStyle = new ol.style.Stroke({
+    color: [30, 30, 30, 1],
+    width: 3.0,
+    lineCap: 'round',
+    lineJoin: 'round',
+    // lineDash: [1, 5]
+    
+  })
+
   // Cheonan Link Line GeoJSON Vector Image Layer
   const CheonanLinkListVectorImage = new ol.layer.VectorImage({
     source: new ol.source.Vector({
@@ -174,7 +190,11 @@ function init() {
       format: new ol.format.GeoJSON()
     }),
     visible: false,
-    title: 'CheonanLinkList'
+    title: 'CheonanLinkList',
+    style: new ol.style.Style({
+      // fill: fillStyle,
+      stroke: strokeStyle,
+    })
   });
 
   // KML Line 그리기
