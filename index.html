@@ -14,19 +14,16 @@
         <div class="grid-1">
             <div class="sidebar">
                 <h2>Base Layers</h2>
-                <input type="radio" name='baseLayerRadioButton' value='BingMaps'>XX Bing Maps<br>
-                <input type="radio" name='baseLayerRadioButton' value='CartoDarkAll'>XX Carto Dark All<br>
-                <input type="radio" name='baseLayerRadioButton' value='OSMStandard' checked>OSM Standard<br>
+                <input type="radio" name='baseLayerRadioButton' value='OSMStandard'>OSM Standard<br>
                 <input type="radio" name='baseLayerRadioButton' value='OSMHumanitarian'>OSM Humanitarian<br>
-                <input type="radio" name='baseLayerRadioButton' value='VectorTileLayerOpenstreetMap'>VectorTile Layer OpenstreetMap<br>
+                <input type="radio" name='baseLayerRadioButton' value='VectorTileLayerOpenstreetMap'>VectorTile Layer
+                OpenstreetMap<br>
 
                 <h2>Layers</h2>
-                <input type="checkbox" name="rasterTileLayerCheckbox" value="TileArcGISLayer">XX Tile ArcGIS Layer<br>
-                <input type="checkbox" name="rasterTileLayerCheckbox" value="NOAAWMSLayer">XX NOAA WMS Layer<br>
-                <input type="checkbox" name='rasterLayerCheckbox' value='openstreetMapFragmentStatic'>XX OpenstreetMap Humanitarian Fragment Static<br>
                 <input type="checkbox" name="rasterTileLayerCheckbox" value="TileDebugLayer">Tile Debug Layer<br>
-                <input type="checkbox" name="rasterTileLayerCheckbox" value="CheonanLinkList" checked>Cheonan Link List<br>
-                <input type="checkbox" name="rasterTileLayerCheckbox" value="CheonanNodeListPoint">Cheonan Node List Point<br>
+                <input type="checkbox" name="rasterTileLayerCheckbox" value="CheonanLinkList">Cheonan Link List<br>
+                <input type="checkbox" name="rasterTileLayerCheckbox" value="CheonanNodeListPoint">Cheonan Node List
+                Point<br>
             </div>
         </div>
         <div class="grid-2">
@@ -37,6 +34,11 @@
             <!-- 오픈레이어스 맵 -->
             <div id="js-map" class="map"></div>
         </div>
+    </div>
+
+    <div class="overlay-container">
+        <span class="overlay-text" id="feature-name"></span><br>
+        <span class="overlay-text" id="feature-additional-info"></span><br>
     </div>
 
     <script src="./libs/v6.1.1-dist/ol.js"></script>

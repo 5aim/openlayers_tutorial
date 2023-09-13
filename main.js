@@ -190,7 +190,7 @@ function init() {
   // Node List
   const nodeListPoint = new ol.layer.Heatmap({
     source: new ol.source.Vector({
-      url: './data/vector_data/node_list.geojson',
+      url: './data/vector_data/beonyeong_ro/beonyeong_buldang_node.geojson',
       format: new ol.format.GeoJSON()
     }),
     radius: 12,
@@ -252,6 +252,36 @@ function init() {
       this.checked ? tileRasterLayer.setVisible(true) : tileRasterLayer.setVisible(false)
     })
   }
+
+  // Vector Feature Popup Information
+  const overlayContainerElement = document.querySelector('.overlay-container');
+  const overlayLayer = new ol.Overlay({
+    element: overlayContainerElement
+  });
+  map.addOverlay(overlayLayer);
   
+  const overlayFeatureName = document.getElementById('feature-name');
+  const overlayFeatureAdditionalInfo = document.getElementById('feature-additional-info');
+
+  // Vector Feature Popup Logic
+  // map.on('click', function(e){
+  map.on('pointermove', function(e){
+    overlayLayer.setPosition(undefined);
+    map.forEachFeatureAtPixel(e.pixel, function(feature, layer){
+      let clickedCoordinate = e.coordinate;
+      let clickedFeatureName = feature.get('name');
+      let clickedFeatureAdditionalInfo = feature.get('additionalInfo');
+      // if(clickedFeatureName && clickedFeatureAdditionalInfo != undefined){
+        overlayLayer.setPosition(clickedCoordinate);
+        overlayFeatureName.innerHTML = clickedFeatureName;
+        overlayFeatureAdditionalInfo.innerHTML = clickedFeatureAdditionalInfo;
+      // }
+    },
+    {
+      layerFilter: function(layerCandidate){
+        return layerCandidate.get('title') === 'CheonanNodeListPoint'
+      }  
+    })
+  })
 }
 
