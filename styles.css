@@ -23,7 +23,17 @@ body {
 }
 
 /* Feature Overlay */
-.overlay-container {
+.node-overlay-container {
+    background-color: #555;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    border-top-right-radius: 14px;
+    border-bottom-left-radius: 14px;
+    border-bottom-right-radius: 14px;
+}
+
+.link-overlay-container {
     background-color: #555;
     color: #fff;
     padding: 20px;

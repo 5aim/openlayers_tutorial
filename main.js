@@ -170,7 +170,7 @@ function init() {
   // Cheonan Link Line GeoJSON Vector Image Layer
   const CheonanLinkListVectorImage = new ol.layer.VectorImage({
     source: new ol.source.Vector({
-      url: './data/vector_data/link_list.geojson',
+      url: './data/vector_data/beonyeong_ro/beonyeong_buldang_link.geojson',
       format: new ol.format.GeoJSON()
     }),
     visible: false,
@@ -253,28 +253,59 @@ function init() {
     })
   }
 
-  // Vector Feature Popup Information
-  const overlayContainerElement = document.querySelector('.overlay-container');
-  const overlayLayer = new ol.Overlay({
+  // Vector Feature Popup Node Information
+  const overlayNodeContainerElement = document.querySelector('.node-overlay-container');
+  const overlayNodeLayer = new ol.Overlay({
+    element: overlayNodeContainerElement
+  });
+  map.addOverlay(overlayNodeLayer);
+
+  // Vector Feature Popup Link Information
+  const overlayContainerElement = document.querySelector('.link-overlay-container');
+  const overlayLinkLayer = new ol.Overlay({
     element: overlayContainerElement
   });
-  map.addOverlay(overlayLayer);
+  map.addOverlay(overlayLinkLayer);
   
-  const overlayFeatureName = document.getElementById('feature-name');
-  const overlayFeatureAdditionalInfo = document.getElementById('feature-additional-info');
+  const overlayNodeName = document.getElementById('node-name');
+  const overlayNodeId = document.getElementById('node-id');
+  const overlayLinkRoadName = document.getElementById('link-road-name');
+  const overlayLinkName = document.getElementById('link-name');
+  const overlayLinkList = document.getElementById('link-list');
 
-  // Vector Feature Popup Logic
+  // Vector Feature Popup Link Logic
   // map.on('click', function(e){
   map.on('pointermove', function(e){
-    overlayLayer.setPosition(undefined);
+    overlayLinkLayer.setPosition(undefined);
     map.forEachFeatureAtPixel(e.pixel, function(feature, layer){
-      let clickedCoordinate = e.coordinate;
-      let clickedFeatureName = feature.get('name');
-      let clickedFeatureAdditionalInfo = feature.get('additionalInfo');
-      // if(clickedFeatureName && clickedFeatureAdditionalInfo != undefined){
-        overlayLayer.setPosition(clickedCoordinate);
-        overlayFeatureName.innerHTML = clickedFeatureName;
-        overlayFeatureAdditionalInfo.innerHTML = clickedFeatureAdditionalInfo;
+      let clickedLinkCoordinate = e.coordinate;
+      let clickedLinkRoadName = feature.get('roadName');
+      let clickedLinkName = feature.get('name');
+      let clickedLinkListInfo = feature.get('LinkList');
+      overlayLinkLayer.setPosition(clickedLinkCoordinate);
+      overlayLinkRoadName.innerHTML = clickedLinkRoadName;
+      overlayLinkName.innerHTML = clickedLinkName;
+      overlayLinkList.innerHTML = clickedLinkListInfo;
+    },
+    {
+      layerFilter: function(layerCandidate){
+        return layerCandidate.get('title') === 'CheonanLinkList'
+      }
+    })
+  })
+
+  // Vector Feature Popup Node Logic
+  // map.on('click', function(e){
+  map.on('pointermove', function(e){
+    overlayNodeLayer.setPosition(undefined);
+    map.forEachFeatureAtPixel(e.pixel, function(feature, layer){
+      let clickedNodeCoordinate = e.coordinate;
+      let clickedNodeName = feature.get('name');
+      let clickedNodeId = feature.get('additionalInfo');
+      // if(clickedNodeName && clickedNodeId != undefined){
+        overlayNodeLayer.setPosition(clickedNodeCoordinate);
+        overlayNodeName.innerHTML = clickedNodeName;
+        overlayNodeId.innerHTML = clickedNodeId;
       // }
     },
     {

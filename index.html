@@ -36,9 +36,30 @@
         </div>
     </div>
 
-    <div class="overlay-container">
-        <span class="overlay-text" id="feature-name"></span><br>
-        <span class="overlay-text" id="feature-additional-info"></span><br>
+    <!-- 노드 modal 창 -->
+    <div class="node-overlay-container">
+        <span class="overlay-text" id="node-id"></span><br><br>
+        <span class="overlay-text" id="node-name"></span><br><br>
+        <span class="overlay-text" id="node-traffic-volume">교차로 통과차량대수 :</span><br>
+        <span class="overlay-text" id="node-average-delay">교차로 평균 지체시간 :</span><br>
+        <span class="overlay-text" id="node-average-queue">교차로 평균 대기행렬 :</span><br>
+        <span class="overlay-text" id="node-average-fuel-consumption">교차로 평균 연료소비량 : </span><br>
+        <span class="overlay-text" id="node-los">LOS : </span><br>
+    </div>
+
+    <!-- 링크 modal 창 -->
+    <div class="link-overlay-container">
+        <span class="overlay-text" id="link-road-name"></span><br><br>
+        <span class="overlay-text" id="link-name"></span><br><br>
+        <span class="overlay-text" id="link-list"></span><br><br>
+        <span class="overlay-text" id="link-yesterday-traffic-volume">전일 교통량 :</span><br>
+        <span class="overlay-text" id="link-simulated-traffic-volume">분석 교통량 :</span><br><br>
+        <span class="overlay-text" id="link-speed">통행 속도 :</span><br>
+        <span class="overlay-text" id="link-travel-time">통행 시간 :</span><br>
+        <span class="overlay-text" id="link-vehicle-capacity">V/C :</span><br><br>
+        <span class="overlay-text" id="link-nox-emissions">NOx 배출량 :</span><br>
+        <span class="overlay-text" id="link-so2-emissions">SO2 배출량 :</span><br>
+        <span class="overlay-text" id="link-co-emissions">CO 배출량 :</span><br>
     </div>
 
     <script src="./libs/v6.1.1-dist/ol.js"></script>
