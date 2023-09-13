@@ -175,12 +175,21 @@ function init() {
 
   // Style for Lines
   const strokeStyle = new ol.style.Stroke({
-    color: [30, 30, 30, 1],
-    width: 3.0,
-    lineCap: 'round',
-    lineJoin: 'round',
+    color: [50, 50, 50, 1],
+    width: 1.0,
+    // lineCap: 'round',
+    // lineJoin: 'round',
     // lineDash: [1, 5]
-    
+  })
+
+  // Node Circle Style
+  const circleShape = new ol.style.RegularShape({
+    fill: new ol.style.Fill({
+      color: [245, 30, 20, 0.8]
+    }),
+    stroke: strokeStyle,
+    points: 30,
+    radius: 12
   })
 
   // Cheonan Link Line GeoJSON Vector Image Layer
@@ -192,8 +201,6 @@ function init() {
     visible: false,
     title: 'CheonanLinkList',
     style: new ol.style.Style({
-      // fill: fillStyle,
-      stroke: strokeStyle,
     })
   });
 
@@ -207,19 +214,34 @@ function init() {
   //   title: 'CheonanLineKML'
   // });
 
-  // Node List
-  const nodeListPoint = new ol.layer.Heatmap({
+  // Node List Heatmap Style
+  // const nodeListHeatmapPoint = new ol.layer.Heatmap({
+  //   source: new ol.source.Vector({
+  //     url: './data/vector_data/beonyeong_ro/beonyeong_buldang_node.geojson',
+  //     format: new ol.format.GeoJSON()
+  //   }),
+  //   visible: false,
+  //   radius: 12,
+  //   blur: 0,
+  //   // [1] : 블러색, [2],[3] : 바깥색 [4] : 안쪽색
+  //   gradient: ['#00f', '#0ff', '#000000', '#000000', '#000000'],
+  //   title: 'CheonanNodeListPoint'
+  // });
+
+  // Node List Vector Icon Style
+  const nodeListIconPoint = new ol.layer.VectorImage({
     source: new ol.source.Vector({
       url: './data/vector_data/beonyeong_ro/beonyeong_buldang_node.geojson',
       format: new ol.format.GeoJSON()
     }),
-    radius: 12,
-    blur: 0,
-    // [1] : 블러색, [2],[3] : 바깥색 [4] : 안쪽색
-    gradient: ['#00f', '#0ff', '#000000', '#000000', '#000000'],
+    visible: true,
     title: 'CheonanNodeListPoint',
-    visible: false
-  });
+    style: new ol.style.Style({
+      fill: fillStyle,
+      stroke: strokeStyle,
+      image: circleShape
+    })
+  })
   
   // Layer Group
   const rasterTileLayerGroup = new ol.layer.Group({
@@ -229,7 +251,8 @@ function init() {
       tileDebugLayer,
       CheonanLinkListVectorImage,
       // CheonanLineKML,
-      nodeListPoint
+      // nodeListHeatmapPoint,
+      nodeListIconPoint
     ]
   })
   map.addLayer(rasterTileLayerGroup);
