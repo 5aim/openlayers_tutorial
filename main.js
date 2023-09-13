@@ -175,8 +175,8 @@ function init() {
 
   // Style for Lines
   const strokeStyle = new ol.style.Stroke({
-    color: [50, 50, 50, 1],
-    width: 1.0,
+    color: [100, 100, 100, 0.8],
+    width: 3.0,
     // lineCap: 'round',
     // lineJoin: 'round',
     // lineDash: [1, 5]
@@ -192,6 +192,15 @@ function init() {
     radius: 12
   })
 
+  // Icon Marker Style
+  const iconMarkerStyle = new ol.style.Icon({
+    src: './data/static_images/icons8-map-marker-800.png',
+    size: [80, 140],
+    offset: [4, 0],
+    opacity: 1,
+    scale: 0.5,
+  })
+
   // Cheonan Link Line GeoJSON Vector Image Layer
   const CheonanLinkListVectorImage = new ol.layer.VectorImage({
     source: new ol.source.Vector({
@@ -201,6 +210,7 @@ function init() {
     visible: false,
     title: 'CheonanLinkList',
     style: new ol.style.Style({
+      stroke: strokeStyle
     })
   });
 
@@ -234,12 +244,12 @@ function init() {
       url: './data/vector_data/beonyeong_ro/beonyeong_buldang_node.geojson',
       format: new ol.format.GeoJSON()
     }),
-    visible: true,
+    visible: false,
     title: 'CheonanNodeListPoint',
     style: new ol.style.Style({
       fill: fillStyle,
       stroke: strokeStyle,
-      image: circleShape
+      image: iconMarkerStyle
     })
   })
   
