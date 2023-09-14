@@ -65,26 +65,6 @@ function init() {
     visible: false,
     title: "OSMHumanitarian"
   });
-
-  // Bing Maps Basemap Layer
-  // const bingMaps = new ol.layer.Tile({
-  //   source: new ol.source.BingMaps({
-  //     key: "At4A89FmDbu18PRx__CW6sioCD6moSnOoLN80nRmVEWgnw4bQAZKGQY4W3CnTd-t",
-  //     imagerySet: "CanvasGray" // Road, CanvasDark, CanvasGray
-  //   }),
-  //   visible: false,
-  //   title: "BingMaps"
-  // });
-
-  // CartoDB BaseMap Layer
-  // const cartoDBBaseLayer = new ol.layer.Tile({
-  //   source: new ol.source.XYZ({
-  //     url: "https://{1-4}.basemaps.cartocdn.com/rastertiles/light_all/{z}/{x}/{y}{scale}.png",
-  //     attributions: "© CARTO"
-  //   }),
-  //   visible: false,
-  //   title: "CartoDarkAll"
-  // });
   
   // Base Vector Layers
   // Vector Tile Layer OpenstreetMap
@@ -106,14 +86,11 @@ function init() {
     });
   });
 
-
   // Base Layer Group
   const baseLayerGroup = new ol.layer.Group({
     layers: [
       openstreetMapStandard,
       openstreetMapHumanitarian,
-      // bingMaps,
-      // cartoDBBaseLayer,
       openstreetMapVectorTile
     ]
   });
@@ -140,155 +117,131 @@ function init() {
     title: 'TileDebugLayer'
   });
 
-  // tile ArcGIS REST API Layer
-  // const tileArcGISLayer = new ol.layer.Tile({
-  //   source: new ol.source.TileArcGISRest({
-  //     url: "http://sampleserver1.arcgisonline.com/ArcGIS/rest/services/Louisville/LOJIC_LandRecords_Louisville/MapServer",
-  //     attributions: 'Copyright© 2008, MSD, PVA, Louisville Water Company, Louisville Metro Government'
-  //   }),
-  //   visible: true,
-  //   title: 'TileArcGISLayer'
-  // })
-  
-
-  // NOAA WMS Layer
-  // const NOAAWMSLayer = new ol.layer.Tile({
-  //   source: new ol.source.TileWMS({
-  //     url:'https://nowcoast.noaa.gov/arcgis/services/nowcoast/forecast_meteoceanhydro_sfc_ndfd_dailymaxairtemp_offsets/MapServer/WMSServer?',
-  //     params:{
-  //       LAYERS: 5,
-  //       FORMAT: 'image/png',
-  //       TRANSPARENT: true
-  //     },
-  //     attributions: '<a href=https://nowcoast.noaa.gov/>© NOAA<a/>'
-  //   }),
-  //   visible: true,
-  //   title: 'NOAAWMSLayer'
-  // })
-
   // Vector Layers
   // Styling of vector features
-  // Style for Polygons
-  const fillStyle = new ol.style.Fill({
-    color: [40, 119, 247, 1]
-  })
-
-  // Style for Lines
-  const strokeStyle = new ol.style.Stroke({
-    color: [100, 100, 100, 0.8],
-    width: 3.0,
-    // lineCap: 'round',
-    // lineJoin: 'round',
-    // lineDash: [1, 5]
-  })
-
-  // Node Circle Style
-  const circleShape = new ol.style.RegularShape({
-    fill: new ol.style.Fill({
-      color: [245, 30, 20, 0.8]
-    }),
-    stroke: strokeStyle,
-    points: 30,
-    radius: 12
-  })
-
   // Icon Marker Style
-  const iconMarkerStyle = new ol.style.Icon({
-    src: './data/static_images/icons8-map-marker-800.png',
-    size: [80, 140],
-    offset: [4, 0],
-    opacity: 1,
-    scale: 0.5,
-  })
-
-  // Cheonan Link Line GeoJSON Vector Image Layer
-  const CheonanLinkListVectorImage = new ol.layer.VectorImage({
-    source: new ol.source.Vector({
-      url: './data/vector_data/beonyeong_ro/beonyeong_buldang_link.geojson',
-      format: new ol.format.GeoJSON()
-    }),
-    visible: false,
-    title: 'CheonanLinkList',
-    style: new ol.style.Style({
-      stroke: strokeStyle
+  const pointerStyle = new ol.style.Style({
+    image: new ol.style.Icon({
+      src: './data/static_images/icons8-map-marker-800.png',
+      size: [80, 140],
+      offset: [4, 0],
+      opacity: 0.8,
+      scale: 0.5,
     })
   });
 
-  // KML Line 그리기
-  // const CheonanLineKML = new ol.layer.Vector({
-  //   source: new ol.source.Vector({
-  //     url: './data/vector_data/line.kml',
-  //     format: new ol.format.KML()
-  //   }),
-  //   visible: false,
-  //   title: 'CheonanLineKML'
-  // });
+  // Link Line Style
+  const linkLineStyle = new ol.style.Style({
+    stroke: new ol.style.Stroke({
+      color: [80, 80, 80, 0.8],
+      width: 3.0
+    })
+  });
 
-  // Node List Heatmap Style
-  // const nodeListHeatmapPoint = new ol.layer.Heatmap({
-  //   source: new ol.source.Vector({
-  //     url: './data/vector_data/beonyeong_ro/beonyeong_buldang_node.geojson',
-  //     format: new ol.format.GeoJSON()
-  //   }),
-  //   visible: false,
-  //   radius: 12,
-  //   blur: 0,
-  //   // [1] : 블러색, [2],[3] : 바깥색 [4] : 안쪽색
-  //   gradient: ['#00f', '#0ff', '#000000', '#000000', '#000000'],
-  //   title: 'CheonanNodeListPoint'
-  // });
+  // Node Polygon Style
+  // LOS 'A'
+  const losAStyle = new ol.style.Style({
+    fill: new ol.style.Fill({
+      color: [0, 176, 80, 0.7]
+    })
+  });
 
+  // LOS 'B'
+  const losBStyle = new ol.style.Style({
+    fill: new ol.style.Fill({
+      color: [146, 208, 80, 0.7]
+    })
+  });
+  
+  // LOS 'C'
+  const losCStyle = new ol.style.Style({
+    fill: new ol.style.Fill({
+      color: [255, 217, 102, 0.7]
+    })
+  });
+
+  // LOS 'D'
+  const losDStyle = new ol.style.Style({
+    fill: new ol.style.Fill({
+      color: [234, 178, 0, 0.7]
+    })
+  });
+
+  // LOS 'E'
+  const losEStyle = new ol.style.Style({
+    fill: new ol.style.Fill({
+      color: [255, 21, 21, 0.7]
+    })
+  });
+
+  // LOS 'F'
+  const losFStyle = new ol.style.Style({
+    fill: new ol.style.Fill({
+      color: [188, 0, 0, 0.7]
+    })
+  });
+  
+  const CheonanStyle = function(feature){
+    let geometryType = feature.getGeometry().getType();
+    let typeProperty = feature.get('LOS');
+
+    if(geometryType === 'Point'){
+      feature.setStyle([pointerStyle]);
+    }
+
+    if(geometryType === 'LineString'){
+      feature.setStyle([linkLineStyle]);
+    }
+
+    if(geometryType === 'Polygon'){
+      if(typeProperty === 'A'){
+        feature.setStyle([losAStyle])
+      };
+      if(typeProperty === 'B'){
+        feature.setStyle([losBStyle])
+      };
+      if(typeProperty === 'C'){
+        feature.setStyle([losCStyle])
+      };
+      if(typeProperty === 'D'){
+        feature.setStyle([losDStyle])
+      };
+      if(typeProperty === 'E'){
+        feature.setStyle([losEStyle])
+      };
+      if(typeProperty === 'F'){
+        feature.setStyle([losFStyle])
+      };
+    }
+  };
+  
   // Node List Vector Icon Style
   const nodeListIconPoint = new ol.layer.VectorImage({
     source: new ol.source.Vector({
-      url: './data/vector_data/beonyeong_ro/beonyeong_buldang_node.geojson',
+      url: './data/vector_data/beonyeong_ro/all_link_node.geojson',
       format: new ol.format.GeoJSON()
     }),
-    visible: false,
+    visible: true,
     title: 'CheonanNodeListPoint',
-    style: new ol.style.Style({
-      fill: fillStyle,
-      stroke: strokeStyle,
-      image: iconMarkerStyle
-    })
+    style: CheonanStyle
   })
   
   // Layer Group
   const rasterTileLayerGroup = new ol.layer.Group({
     layers:[
-      // tileArcGISLayer,
-      // NOAAWMSLayer,
       tileDebugLayer,
-      CheonanLinkListVectorImage,
-      // CheonanLineKML,
-      // nodeListHeatmapPoint,
       nodeListIconPoint
     ]
   })
   map.addLayer(rasterTileLayerGroup);
 
-  // Static Image OpenstreetMap
-  // const openstreetMapFragmentStatic = new ol.layer.Image({
-  //   source: new ol.source.ImageStatic({
-  //     url: './data/static_images/openlayers_static_humanitarian.PNG',
-  //     imageExtent: [4991698.9328313675, 5050292.393744084, 10008191.828130603, 10013417.911357462],
-  //     attributions: '<a href=https://www.openstreetmap.org/copyright/>© OpenStreetMap contributors<a/>',
-  //   }),
-  //   title: 'openstreetMapFragmentStatic'
-  // })
-
-  
-
-    // Raster Tile Layer Group
-    const rasterLayerGroup = new ol.layer.Group({
-      layers:[
-        // tileArcGISLayer,
-        // NOAAWMSLayer, 
-        tileDebugLayer, 
-        // openstreetMapFragmentStatic
-      ]
-    })
-    map.addLayer(rasterLayerGroup);
+  // Raster Tile Layer Group
+  const rasterLayerGroup = new ol.layer.Group({
+    layers:[
+      tileDebugLayer,
+    ]
+  })
+  map.addLayer(rasterLayerGroup);
 
   // Layer Switcher Logic for Raster Tile Layers
   const tileRasterLayerElements = document.querySelectorAll('.sidebar > input[type=checkbox]');
@@ -296,7 +249,7 @@ function init() {
     tileRasterLayerElement.addEventListener('change', function(){
       let tileRasterLayerElementValue = this.value;
       let tileRasterLayer;
-
+      
       rasterTileLayerGroup.getLayers().forEach(function(element, index, array){
         if(tileRasterLayerElementValue === element.get('title')){
           tileRasterLayer = element;
@@ -312,40 +265,9 @@ function init() {
     element: overlayNodeContainerElement
   });
   map.addOverlay(overlayNodeLayer);
-
-  // Vector Feature Popup Link Information
-  const overlayContainerElement = document.querySelector('.link-overlay-container');
-  const overlayLinkLayer = new ol.Overlay({
-    element: overlayContainerElement
-  });
-  map.addOverlay(overlayLinkLayer);
   
   const overlayNodeName = document.getElementById('node-name');
   const overlayNodeId = document.getElementById('node-id');
-  const overlayLinkRoadName = document.getElementById('link-road-name');
-  const overlayLinkName = document.getElementById('link-name');
-  const overlayLinkList = document.getElementById('link-list');
-
-  // Vector Feature Popup Link Logic
-  // map.on('click', function(e){
-  map.on('pointermove', function(e){
-    overlayLinkLayer.setPosition(undefined);
-    map.forEachFeatureAtPixel(e.pixel, function(feature, layer){
-      let clickedLinkCoordinate = e.coordinate;
-      let clickedLinkRoadName = feature.get('roadName');
-      let clickedLinkName = feature.get('name');
-      let clickedLinkListInfo = feature.get('LinkList');
-      overlayLinkLayer.setPosition(clickedLinkCoordinate);
-      overlayLinkRoadName.innerHTML = clickedLinkRoadName;
-      overlayLinkName.innerHTML = clickedLinkName;
-      overlayLinkList.innerHTML = clickedLinkListInfo;
-    },
-    {
-      layerFilter: function(layerCandidate){
-        return layerCandidate.get('title') === 'CheonanLinkList'
-      }
-    })
-  })
 
   // Vector Feature Popup Node Logic
   // map.on('click', function(e){
