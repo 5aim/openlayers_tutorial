@@ -1,6 +1,10 @@
 window.onload = init;
 
 function init() {
+  // EPSG:5179 for Korea
+  proj4.defs("EPSG:5179","+proj=tmerc +lat_0=38 +lon_0=127.5 +k=0.9996 +x_0=1000000 +y_0=2000000 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs +type=crs");
+  ol.proj.proj4.register(proj4);
+
   // Attribution Control
   const attributionControl = new ol.control.Attribution({
     collapsible: true
@@ -32,6 +36,7 @@ function init() {
       zoom: 13,
       maxZoom: 19,
       minZoom: 2,
+      // projection: 'EPSG:5179',
       // cartesian coordinate system : 맵 범위 지정
       extent: [14136311.278827626, 4394656.463022412, 14174402.542814588, 4429267.881654042]
     }),
@@ -47,6 +52,9 @@ function init() {
         scaleLineControl,
         zoomSliderControl,
       ]),
+    })
+    map.on('click', function(e){
+      console.log(e.coordinate);
   });
   
   // Base Layers
