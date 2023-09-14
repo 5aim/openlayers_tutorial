@@ -185,8 +185,24 @@ function init() {
     let geometryType = feature.getGeometry().getType();
     let typeProperty = feature.get('LOS');
 
+    // Link, Node Name Style
+    let featureName = feature.get('name');
+    // console.log(typeof featureName);
+    let featureNameStyles = new ol.style.Style({
+      text: new ol.style.Text({
+        text: featureName,
+        scale: 1,
+        fill: new ol.style.Fill({
+          color: [80, 80, 80, 1]
+        })
+      })
+    })
+
     if(geometryType === 'Point'){
-      feature.setStyle([pointerStyle]);
+      feature.setStyle([
+        pointerStyle,
+        // featureNameStyles
+      ]);
     }
 
     if(geometryType === 'LineString'){
