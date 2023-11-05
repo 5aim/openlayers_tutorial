@@ -150,55 +150,52 @@ function init() {
   // LOS 'A'
   const losAStyle = new ol.style.Style({
     fill: new ol.style.Fill({
-      color: [0, 176, 80, 0.7]
+      color: [0, 176, 80, 0.6]
     })
   });
 
   // LOS 'B'
   const losBStyle = new ol.style.Style({
     fill: new ol.style.Fill({
-      color: [146, 208, 80, 0.7]
+      color: [146, 208, 80, 0.6]
     })
   });
   
   // LOS 'C'
   const losCStyle = new ol.style.Style({
     fill: new ol.style.Fill({
-      color: [255, 217, 102, 0.7]
+      color: [255, 217, 102, 0.6]
     })
   });
 
   // LOS 'D'
   const losDStyle = new ol.style.Style({
     fill: new ol.style.Fill({
-      color: [234, 178, 0, 0.7]
+      color: [234, 178, 0, 0.6]
     })
   });
 
   // LOS 'E'
   const losEStyle = new ol.style.Style({
     fill: new ol.style.Fill({
-      color: [255, 21, 21, 0.7]
+      color: [255, 21, 21, 0.6]
     })
   });
 
   // LOS 'F'
   const losFStyle = new ol.style.Style({
     fill: new ol.style.Fill({
-      color: [188, 0, 0, 0.7]
+      color: [188, 0, 0, 0.6]
     })
   });
   
   const CheonanStyle = function(feature){
     let geometryType = feature.getGeometry().getType();
-    let typeProperty = feature.get('LOS');
+    let typeProperty = feature.get('los');
 
     // Link, Node Name Style
-    let featureName = feature.get('name');
-    // console.log(typeof featureName);
     let featureNameStyles = new ol.style.Style({
       text: new ol.style.Text({
-        text: featureName,
         scale: 1,
         fill: new ol.style.Fill({
           color: [80, 80, 80, 1]
@@ -209,7 +206,6 @@ function init() {
     if(geometryType === 'Point'){
       feature.setStyle([
         pointerStyle,
-        // featureNameStyles
       ]);
     }
 
@@ -218,23 +214,26 @@ function init() {
     }
 
     if(geometryType === 'Polygon'){
+      feature.setStyle([
+        featureNameStyles
+      ]);
       if(typeProperty === 'A'){
-        feature.setStyle([losAStyle])
+        feature.setStyle([losAStyle]);
       };
       if(typeProperty === 'B'){
-        feature.setStyle([losBStyle])
+        feature.setStyle([losBStyle]);
       };
       if(typeProperty === 'C'){
-        feature.setStyle([losCStyle])
+        feature.setStyle([losCStyle]);
       };
       if(typeProperty === 'D'){
-        feature.setStyle([losDStyle])
+        feature.setStyle([losDStyle]);
       };
       if(typeProperty === 'E'){
-        feature.setStyle([losEStyle])
+        feature.setStyle([losEStyle]);
       };
       if(typeProperty === 'F'){
-        feature.setStyle([losFStyle])
+        feature.setStyle([losFStyle]);
       };
     }
   };
@@ -242,7 +241,7 @@ function init() {
   // Node List Vector Icon Style
   const nodeListIconPoint = new ol.layer.VectorImage({
     source: new ol.source.Vector({
-      url: './data/vector_data/beonyeong_ro/all_link_node.geojson',
+      url: './data/vector_data/beonyeong_ro/beonyeong_buldang_node.geojson',
       format: new ol.format.GeoJSON()
     }),
     visible: true,
@@ -299,8 +298,8 @@ function init() {
     overlayNodeLayer.setPosition(undefined);
     map.forEachFeatureAtPixel(e.pixel, function(feature, layer){
       let clickedNodeCoordinate = e.coordinate;
-      let clickedNodeName = feature.get('name');
-      let clickedNodeId = feature.get('additionalInfo');
+      let clickedNodeName = feature.get('node-name');
+      let clickedNodeId = feature.get('node-id');
       // if(clickedNodeName && clickedNodeId != undefined){
         overlayNodeLayer.setPosition(clickedNodeCoordinate);
         overlayNodeName.innerHTML = clickedNodeName;
