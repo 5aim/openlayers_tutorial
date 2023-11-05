@@ -1,0 +1,968 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "node-id": 3020119200,
+        "node-name": "서북경찰서앞",
+        "smart-int-no": 1,
+        "los": "A"
+      },
+      "geometry": {
+        "coordinates":[
+            127.13660261536563,
+            36.85689294149047
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "node-id": 3020185201,
+        "node-name": "엠디빌딩앞",
+        "smart-int-no": 2,
+        "los": "B"
+      },
+      "geometry": {
+        "coordinates":[
+            127.13426274327554,
+            36.85588466359707
+        ],
+        "type": "Point"
+      },
+      "id": 1
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "node-id": 3020078900,
+        "node-name": "천안공단산업계량소앞",
+        "smart-int-no": 3,
+        "los": "C"
+      },
+      "geometry": {
+        "coordinates":[
+            127.1244443283108,
+            36.85125463912897
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "node-id": 3020070600,
+        "node-name": "공단사거리",
+        "smart-int-no": 4,
+        "los": "D"
+      },
+      "geometry": {
+        "coordinates":[
+            127.1216103808473,
+            36.84547016893028
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "node-id": 3020069200,
+        "node-name": "성성2교차로",
+        "smart-int-no": 5,
+        "los": "E"
+      },
+      "geometry": {
+        "coordinates":[
+            127.12114099377294,
+            36.84514060503648
+        ],
+        "type": "Point"
+      },
+      "id": 4
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "node-id": 3020060300,
+        "node-name": "삼성빌딩삼거리",
+        "smart-int-no": 6,
+        "los": "F"
+      },
+      "geometry": {
+        "coordinates":[
+            127.12085875518841,
+            36.83903040964519
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "node-id": 3020046900,
+        "node-name": "천안브라운스톤아파트114동앞",
+        "smart-int-no": 7,
+        "los": "A"
+      },
+      "geometry": {
+        "coordinates":[
+            127.1143669818087,
+            36.83074561943383
+        ],
+        "type": "Point"
+      },
+      "id": 6
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "node-id": 3020042300,
+        "node-name": "운동장사거리",
+        "smart-int-no": 8,
+        "los": "B"
+      },
+      "geometry": {
+        "coordinates":[
+            127.11145559572583,
+            36.82253878535538
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "node-id": 3020038000,
+        "node-name": "시청앞사거리",
+        "smart-int-no": 9,
+        "los": "C"
+      },
+      "geometry": {
+        "coordinates":[
+            127.10940645150794,
+            36.81589999155193
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "node-id": 3020033100,
+        "node-name": "불당아이파크105동앞",
+        "smart-int-no": 11,
+        "los": "D"
+      },
+      "geometry": {
+        "coordinates":[
+            127.1070354447661,
+            36.80776853620422
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "node-id": 3020030800,
+        "node-name": "갤러리아사거리",
+        "smart-int-no": 12,
+        "los": "E"
+      },
+      "geometry": {
+        "coordinates":[
+            127.105099750958,
+            36.80127276605606
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "node-id": 3020042400,
+        "node-name": "월봉중사거리",
+        "smart-int-no": 15,
+        "los": "F"
+      },
+      "geometry": {
+        "coordinates":[
+            127.11162964406475,
+            36.802412073968654
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "node-id": 3020049500,
+        "node-name": "쌍용도서관삼거리",
+        "smart-int-no": 16,
+        "los": "A"
+      },
+      "geometry": {
+        "coordinates":[
+            127.11494483626558,
+            36.801710996960196
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "node-id": 3020058800,
+        "node-name": "용암사거리",
+        "smart-int-no": 17,
+        "los": "B"
+      },
+      "geometry": {
+        "coordinates":[
+            127.11825980148734,
+            36.80147649636892
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "node-name": "이마트24천안쌍용제일점앞",
+        "node-id": 3020069500,
+        "smart-int-no": 18,
+        "los": "C"
+      },
+      "geometry": {
+        "coordinates":[
+            127.12146017848175,
+            36.80092149234784
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "node-name": "쌍용초사거리",
+        "node-id": 3020073200,
+        "smart-int-no": 19,
+        "los": "D"
+      },
+      "geometry": {
+        "coordinates":[
+            127.12320041844413,
+            36.800620282799684
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "node-name": "쌍용동사거리",
+        "node-id": 3020081700,
+        "smart-int-no": 20,
+        "los": "E"
+      },
+      "geometry": {
+        "coordinates":[
+            127.12614544816267,
+            36.8003676297497
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "node-name": "번영로근린광장앞",
+        "smart-int-no": 10,
+        "node-id": 3020036600,
+        "los": "F"
+      },
+      "geometry": {
+        "coordinates":[
+            127.1085268733658,
+            36.812734385999846
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "node-name": "일봉산사거리",
+        "smart-int-no": 21,
+        "node-id": 3020094100,
+        "los": "A"
+      },
+      "geometry": {
+        "coordinates":[
+            127.13004901973324,
+            36.798995309374206
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "node-id": 3020097200,
+        "node-name": "차돌길삼거리",
+        "smart-int-no": 58,
+        "los": "B"
+      },
+      "geometry": {
+        "coordinates":[
+            127.13022193078041,
+            36.79896543061774
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "node-name": "방아다리사거리",
+        "smart-int-no": 27,
+        "node-id": 3020082700,
+        "los": "C"
+      },
+      "geometry": {
+        "coordinates":[
+            127.1260607130746,
+            36.79482383346513
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "node-id": 3020078000,
+        "node-name": "우리척병원앞",
+        "smart-int-no": 26,
+        "los": "D"
+      },
+      "geometry": {
+        "coordinates":[
+            127.1246736415597,
+            36.79364766740311
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "node-name": "쌍용역교차로",
+        "smart-int-no": 25,
+        "node-id": 3020073900,
+        "los": "E"
+      },
+      "geometry": {
+        "coordinates":[
+            127.12297993503745,
+            36.793301755632186
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "node-name": "삼성미라클의원앞",
+        "smart-int-no": 24,
+        "node-id": 3020068800,
+        "los": "F"
+      },
+      "geometry": {
+        "coordinates":[
+            127.12149276028828,
+            36.792690946999016
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "node-name": "삼일원앙아파트앞",
+        "smart-int-no": 23,
+        "node-id": 3010029900,
+        "los": "A"
+      },
+      "geometry": {
+        "coordinates":[
+            127.11925465375356,
+            36.789740318125155
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "node-name": "신방삼거리",
+        "smart-int-no": 22,
+        "node-id": 3010029100,
+        "los": "B"
+      },
+      "geometry": {
+        "coordinates":[
+            127.11671057397803,
+            36.78534573903312
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "node-name": "나이키천안쌍용점앞",
+        "smart-int-no": 57,
+        "node-id": 3020100500,
+        "los": "C"
+      },
+      "geometry": {
+        "coordinates":[
+            127.13168600574676,
+            36.8030486760091
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "node-name": "천안계광중학교앞",
+        "smart-int-no": 56,
+        "node-id": 3020103600,
+        "los": "D"
+      },
+      "geometry": {
+        "coordinates":[
+            127.13248077064975,
+            36.80759653227548
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "node-name": "오일뱅크쌍용대로지점앞",
+        "smart-int-no": 55,
+        "node-id": 3010045200,
+        "los": "E"
+      },
+      "geometry": {
+        "coordinates":[
+            127.13306374042236,
+            36.810111085694814
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "node-id": 3010047500,
+        "node-name": "골프존파크앞",
+        "smart-int-no": 54,
+        "los": "F"
+      },
+      "geometry": {
+        "coordinates":[
+            127.13427087289,
+            36.81404556976179
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "node-id": 3020114900,
+        "node-name": "구상골사거리",
+        "smart-int-no": 53,
+        "los": "A"
+      },
+      "geometry": {
+        "coordinates":[
+            127.13543930306207,
+            36.818600033716635
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "node-name": "자전거스페이스앞",
+        "smart-int-no": 52,
+        "node-id": 3020117900,
+        "los": "B"
+      },
+      "geometry": {
+        "coordinates":[
+            127.13627406869682,
+            36.822246989604
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "node-name": "홈플러스익스프레스천안성정점앞",
+        "smart-int-no": 51,
+        "node-id": 3020118900,
+        "los": "C"
+      },
+      "geometry": {
+        "coordinates":[
+            127.13657501996028,
+            36.823263406131105
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "node-name": "시민문화여성회관사거리",
+        "smart-int-no": 50,
+        "node-id": 3020121500,
+        "los": "D"
+      },
+      "geometry": {
+        "coordinates":[
+            127.13698922028294,
+            36.826321262136815
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "node-name": "통계청천안사무소앞",
+        "smart-int-no": 49,
+        "node-id": 3020124000,
+        "los": "E"
+      },
+      "geometry": {
+        "coordinates":[
+            127.13744075261525,
+            36.830596072668996
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "node-name": "현대자동차천안북부점앞",
+        "smart-int-no": 48,
+        "node-id": 3020125600,
+        "los": "F"
+      },
+      "geometry": {
+        "coordinates":[
+            127.1377689539973,
+            36.83408564410466
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "node-name": "GS25두정우리점앞",
+        "smart-int-no": 47,
+        "node-id": 3020125900,
+        "los": "A"
+      },
+      "geometry": {
+        "coordinates":[
+            127.13798372222652,
+            36.83584455046723
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "node-name": "북부지하차도",
+        "smart-int-no": 46,
+        "node-id": 3020126100,
+        "los": "B"
+      },
+      "geometry": {
+        "coordinates":[
+            127.13770686712928,
+            36.839319690041236
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "node-name": "농협은행성정동지점앞",
+        "smart-int-no": 59,
+        "node-id": 3020135000,
+        "los": "C"
+      },
+      "geometry": {
+        "coordinates":[
+            127.14050027324976,
+            36.82603928557347
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "node-name": "인쇄창사거리",
+        "smart-int-no": 60,
+        "node-id": 3020146900,
+        "los": "D"
+      },
+      "geometry": {
+        "coordinates":[
+            127.14420812854371,
+            36.82565356087001
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "node-name": "역말오거리",
+        "node-id": 3010068300,
+        "smart-int-no": 37,
+        "los": "E"
+      },
+      "geometry": {
+        "coordinates":[
+            127.15210801405021,
+            36.82538530604492
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "node-id": 3010066200,
+        "node-name": "방죽안오거리",
+        "smart-int-no": 13,
+        "los": "F"
+      },
+      "geometry": {
+        "coordinates":[
+            127.15141732148356,
+            36.81913319291675
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "node-name": "터미널사거리",
+        "smart-int-no": 14,
+        "node-id": 3010076200,
+        "los": "A"
+      },
+      "geometry": {
+        "coordinates":[
+            127.15765815660961,
+            36.819398687360774
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "node-name": "천안로사거리",
+        "smart-int-no": 38,
+        "node-id": 3010085300,
+        "los": "B"
+      },
+      "geometry": {
+        "coordinates":[
+            127.16210240151804,
+            36.8214067719328
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "node-name": "일봉빌딩앞",
+        "smart-int-no": 28,
+        "node-id": 3010058000,
+        "los": "C"
+      },
+      "geometry": {
+        "coordinates":[
+            127.14220138178803,
+            36.79888731710474
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "node-name": "남부오거리",
+        "node-id": 3010069600,
+        "smart-int-no": 29,
+        "los": "D"
+      },
+      "geometry": {
+        "coordinates":[
+            127.15304010220615,
+            36.79885057958508
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "node-name": "충무로사거리",
+        "smart-int-no": 30,
+        "node-id": 3010078900,
+        "los": "E"
+      },
+      "geometry": {
+        "coordinates":[
+            127.15859086922734,
+            36.79920194224235
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "node-name": "한성빌딩앞",
+        "smart-int-no": 31,
+        "node-id": 3010084400,
+        "los": "F"
+      },
+      "geometry": {
+        "coordinates":[
+            127.16162527661254,
+            36.798948440603354
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "node-name": "구성삼거리",
+        "smart-int-no": 42,
+        "node-id": 3010087900,
+        "los": "A"
+      },
+      "geometry": {
+        "coordinates":[
+            127.16414212247395,
+            36.79904368208716
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "node-name": "고재사거리",
+        "smart-int-no": 41,
+        "node-id": 3010087400,
+        "los": "B"
+      },
+      "geometry": {
+        "coordinates":[
+            127.16397837879492,
+            36.801805600208695
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "node-name": "도로원점삼거리",
+        "smart-int-no": 40,
+        "node-id": 3010087200,
+        "los": "C"
+      },
+      "geometry": {
+        "coordinates":[
+            127.1640382975362,
+            36.806573230606205
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "node-name": "동부사거리",
+        "smart-int-no": 39,
+        "node-id": 3010088200,
+        "los": "D"
+      },
+      "geometry": {
+        "coordinates":[
+            127.16421402046319,
+            36.81088245170584
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "node-name": "굴울사거리",
+        "smart-int-no": 43,
+        "node-id": 3010088400,
+        "los": "E"
+      },
+      "geometry": {
+        "coordinates":[
+            127.16449171664055,
+            36.79140787446093
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "node-name": "삼룡사거리",
+        "smart-int-no": 44,
+        "node-id": 3010088800,
+        "los": "F"
+      },
+      "geometry": {
+        "coordinates":[
+            127.1643111991109,
+            36.789559029830514
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "node-name": "청삼교차로",
+        "smart-int-no": 45,
+        "node-id": 3010089600,
+        "los": "A"
+      },
+      "geometry": {
+        "coordinates":[
+            127.16495535573313,
+            36.78135444134246
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "node-name": "태경빌딩앞",
+        "node-id": 3010076700,
+        "smart-int-no": 36,
+        "los": "B"
+      },
+      "geometry": {
+        "coordinates":[
+            127.15759120717786,
+            36.781704894186376
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "node-name": "파리바게뜨청당신도시점앞",
+        "smart-int-no": 35,
+        "node-id": 3010067000,
+        "los": "C"
+      },
+      "geometry": {
+        "coordinates":[
+            127.15189147759406,
+            36.78218369236056
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "node-name": "버들마을우미린아파트307동앞",
+        "smart-int-no": 34,
+        "node-id": 3010060900,
+        "los": "D"
+      },
+      "geometry": {
+        "coordinates":[
+            127.14544108488633,
+            36.783079085531824
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "node-name": "새말사거리",
+        "smart-int-no": 33,
+        "node-id": 3010036400,
+        "los": "E"
+      },
+      "geometry": {
+        "coordinates":[
+            127.12810895770906,
+            36.78635127815744
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "node-name": "하신삼거리",
+        "smart-int-no": 32,
+        "node-id": 3010032800,
+        "los": "F"
+      },
+      "geometry": {
+        "coordinates":[
+            127.12373766075541,
+            36.78607284891538
+        ],
+        "type": "Point"
+      }
+    }
+  ]
+}

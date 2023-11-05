@@ -241,7 +241,7 @@ function init() {
   // Node List Vector Icon Style
   const nodeListIconPoint = new ol.layer.VectorImage({
     source: new ol.source.Vector({
-      url: './data/vector_data/beonyeong_ro/beonyeong_buldang_node.geojson',
+      url: './data/vector_data/beonyeong_ro/polygon_beonyeong_buldang_node.geojson',
       format: new ol.format.GeoJSON()
     }),
     visible: true,
@@ -312,5 +312,27 @@ function init() {
       }  
     })
   })
+
+  // Select Interaction - For Sytling Selected Points
+  const selectInteraction = new ol.interaction.Select({
+    condition: ol.events.condition.singleClick,
+    layers: function(layer){
+      return layer.get('title') === 'CheonanNodeListPoint'
+    },
+    style: new ol.style.Style({
+      image: new ol.style.Circle({
+        fill: new ol.style.Fill({
+          color: [50, 50, 50, 0.7]
+        }),
+        radius: 12,
+        stroke: new ol.style.Stroke({
+          color: [150, , 150, 150, 0.8],
+          width: 3
+        })
+      })
+    })
+  })
+  map.addInteraction(selectInteraction);
+  
 }
 
