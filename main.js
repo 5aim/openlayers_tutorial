@@ -61,7 +61,7 @@ function init() {
   // Openstreet Map Standard
   const openstreetMapStandard = new ol.layer.Tile({
     source: new ol.source.OSM(),
-    visible: true,
+    visible: false,
     title: "OSMStandard"
   });
   
@@ -82,7 +82,7 @@ function init() {
       format: new ol.format.MVT(),
       attributions: '<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>'
     }),
-    visible: false,
+    visible: true,
     title: 'VectorTileLayerOpenstreetMap'
   })
   
@@ -129,12 +129,11 @@ function init() {
   // Styling of vector features
   // Icon Marker Style
   const pointerStyle = new ol.style.Style({
-    image: new ol.style.Icon({
-      src: './data/static_images/icons8-map-marker-800.png',
-      size: [80, 140],
-      offset: [4, 0],
-      opacity: 0.8,
-      scale: 0.5,
+    image: new ol.style.Circle({
+      fill: new ol.style.Fill({
+        color: [50, 50, 50, 0.7]
+      }),
+      radius: 12
     })
   });
 
@@ -149,43 +148,55 @@ function init() {
   // Node Polygon Style
   // LOS 'A'
   const losAStyle = new ol.style.Style({
-    fill: new ol.style.Fill({
-      color: [0, 176, 80, 0.6]
+    image: new ol.style.Circle({
+      fill: new ol.style.Fill({
+        color: [0, 176, 80, 0.6]
+    })
     })
   });
 
   // LOS 'B'
   const losBStyle = new ol.style.Style({
-    fill: new ol.style.Fill({
-      color: [146, 208, 80, 0.6]
+    image: new ol.style.Circle({
+      fill: new ol.style.Fill({
+        color: [146, 208, 80, 0.6]
+    })
     })
   });
   
   // LOS 'C'
   const losCStyle = new ol.style.Style({
-    fill: new ol.style.Fill({
-      color: [255, 217, 102, 0.6]
+    image: new ol.style.Circle({
+      fill: new ol.style.Fill({
+        color: [255, 217, 102, 0.6]
+    })
     })
   });
 
   // LOS 'D'
   const losDStyle = new ol.style.Style({
-    fill: new ol.style.Fill({
-      color: [234, 178, 0, 0.6]
+    image: new ol.style.Circle({
+      fill: new ol.style.Fill({
+        color: [234, 178, 0, 0.6]
+    })
     })
   });
 
   // LOS 'E'
   const losEStyle = new ol.style.Style({
-    fill: new ol.style.Fill({
-      color: [255, 21, 21, 0.6]
+    image: new ol.style.Circle({
+      fill: new ol.style.Fill({
+        color: [255, 21, 21, 0.6]
+    })
     })
   });
 
   // LOS 'F'
   const losFStyle = new ol.style.Style({
-    fill: new ol.style.Fill({
-      color: [188, 0, 0, 0.6]
+    image: new ol.style.Circle({
+      fill: new ol.style.Fill({
+        color: [188, 0, 0, 0.6]
+    })
     })
   });
   
@@ -241,7 +252,7 @@ function init() {
   // Node List Vector Icon Style
   const nodeListIconPoint = new ol.layer.VectorImage({
     source: new ol.source.Vector({
-      url: './data/vector_data/beonyeong_ro/polygon_beonyeong_buldang_node.geojson',
+      url: './data/vector_data/beonyeong_ro/point_cheonan_node.geojson',
       format: new ol.format.GeoJSON()
     }),
     visible: true,
@@ -294,27 +305,27 @@ function init() {
 
   // Vector Feature Popup Node Logic
   // map.on('click', function(e){
-  map.on('pointermove', function(e){
-    overlayNodeLayer.setPosition(undefined);
-    map.forEachFeatureAtPixel(e.pixel, function(feature, layer){
-      let clickedNodeCoordinate = e.coordinate;
-      let clickedNodeName = feature.get('node-name');
-      let clickedNodeId = feature.get('node-id');
-      // if(clickedNodeName && clickedNodeId != undefined){
-        overlayNodeLayer.setPosition(clickedNodeCoordinate);
-        overlayNodeName.innerHTML = clickedNodeName;
-        overlayNodeId.innerHTML = clickedNodeId;
-      // }
-    },
-    {
-      layerFilter: function(layerCandidate){
-        return layerCandidate.get('title') === 'CheonanNodeListPoint'
-      }  
-    })
-  })
+  // map.on('pointermove', function(e){
+  //   overlayNodeLayer.setPosition(undefined);
+  //   map.forEachFeatureAtPixel(e.pixel, function(feature, layer){
+  //     let clickedNodeCoordinate = e.coordinate;
+  //     let clickedNodeName = feature.get('node-name');
+  //     let clickedNodeId = feature.get('node-id');
+  //     // if(clickedNodeName && clickedNodeId != undefined){
+  //       overlayNodeLayer.setPosition(clickedNodeCoordinate);
+  //       overlayNodeName.innerHTML = clickedNodeName;
+  //       overlayNodeId.innerHTML = clickedNodeId;
+  //     // }
+  //   },
+  //   {
+  //     layerFilter: function(layerCandidate){
+  //       return layerCandidate.get('title') === 'CheonanNodeListPoint'
+  //     }  
+  //   })
+  // })
 
   // Select Interaction - For Sytling Selected Points
-  const selectInteraction = new ol.interaction.Select({
+  /* const selectInteraction = new ol.interaction.Select({
     condition: ol.events.condition.singleClick,
     layers: function(layer){
       return layer.get('title') === 'CheonanNodeListPoint'
@@ -326,13 +337,33 @@ function init() {
         }),
         radius: 12,
         stroke: new ol.style.Stroke({
-          color: [150, , 150, 150, 0.8],
+          color: [0, 0, 0, 1],
           width: 3
         })
       })
     })
   })
-  map.addInteraction(selectInteraction);
+  map.addInteraction(selectInteraction); */
   
+  const selectInteractionV2 = new ol.interaction.Select();
+  map.addInteraction(selectInteractionV2)
+  selectInteractionV2.on('select', function(e){
+    let selectedFeature = e.selected;
+    if(selected.length > 0 && selectedFeature[0].geoGeometry().getType() === 'Point'){
+      selectedFeature[0].setStyle(new ol.style.Style({
+        image: new ol.style.Circle({
+          fill: new ol.style.Fill({
+            color: [50, 50, 50, 0.7]
+          }),
+          radius: 12,
+          stroke: new ol.style.Stroke({
+            color: [0, 0, 0, 1],
+            width: 3
+            })
+          })
+        })
+      );
+    };
+  })
 }
 

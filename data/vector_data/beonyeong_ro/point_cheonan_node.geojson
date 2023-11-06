@@ -1,0 +1,2331 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "los": "",
+        "traffic_volume": "",
+        "avg_delay": "",
+        "avg_queue": "",
+        "avg_fuel_consumption": "",
+        "node-id": 3020155500,
+        "smart-int-no": 0,
+        "node-name": "업성동삼거리"
+      },
+      "geometry": {
+        "coordinates": [
+          127.15059283954929,
+          36.862874938388984
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "los": "",
+        "traffic_volume": "",
+        "avg_delay": "",
+        "avg_queue": "",
+        "avg_fuel_consumption": "",
+        "node-id": 3020152300,
+        "smart-int-no": 0,
+        "node-name": "직산역삼거리"
+      },
+      "geometry": {
+        "coordinates": [
+          127.14787222772043,
+          36.871917723078056
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "los": "A",
+        "traffic_volume": [
+          2934,
+          1182
+        ],
+        "avg_delay": [
+          115.91,
+          91.88
+        ],
+        "avg_queue": [
+          110.06,
+          44.04
+        ],
+        "avg_fuel_consumption": [
+          242.34,
+          311.3
+        ],
+        "smart-int-no": 1,
+        "node-name": "서북경찰서앞",
+        "node-id": 3020119200
+      },
+      "geometry": {
+        "coordinates": [
+          127.13693010495768,
+          36.85682280055305
+        ],
+        "type": "Point"
+      },
+      "id": 2
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "los": "A",
+        "traffic_volume": [
+          1692,
+          1285
+        ],
+        "avg_delay": [
+          138.7,
+          84.09
+        ],
+        "avg_queue": [
+          55.55,
+          175.32
+        ],
+        "avg_fuel_consumption": [
+          122.64,
+          195.14
+        ],
+        "node-name": "엠디빌딩앞",
+        "node-id": 3020185201,
+        "smart-int-no": 2
+      },
+      "geometry": {
+        "coordinates": [
+          127.13497993486135,
+          36.855984619811636
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "los": "C",
+        "traffic_volume": [
+          2723,
+          2467
+        ],
+        "avg_delay": [
+          53.62,
+          99.38
+        ],
+        "avg_queue": [
+          98.36,
+          151.48
+        ],
+        "avg_fuel_consumption": [
+          214.74,
+          128.97
+        ],
+        "node-id": 3020078900,
+        "node-name": "천안공단산업계량소앞",
+        "smart-int-no": 3
+      },
+      "geometry": {
+        "coordinates": [
+          127.12563992380024,
+          36.85125989756898
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "los": "",
+        "traffic_volume": "",
+        "avg_delay": "",
+        "avg_queue": "",
+        "avg_fuel_consumption": "",
+        "node-id": 3020160500,
+        "node-name": "공주대천안캠퍼스삼거리",
+        "smart-int-no": 0
+      },
+      "geometry": {
+        "coordinates": [
+          127.15533963777898,
+          36.850452454005605
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "los": "B",
+        "traffic_volume": [
+          2645,
+          1906
+        ],
+        "avg_delay": [
+          199.45,
+          84.47
+        ],
+        "avg_queue": [
+          188.89,
+          193.07
+        ],
+        "avg_fuel_consumption": [
+          283.84,
+          400.92
+        ],
+        "node-id": 3020070600,
+        "node-name": "공단사거리",
+        "smart-int-no": 4
+      },
+      "geometry": {
+        "coordinates": [
+          127.12220887957693,
+          36.845542677804985
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "los": "F",
+        "traffic_volume": [
+          1742,
+          2574
+        ],
+        "avg_delay": [
+          131.31,
+          52.94
+        ],
+        "avg_queue": [
+          178.32,
+          173.37
+        ],
+        "avg_fuel_consumption": [
+          254.82,
+          264.52
+        ],
+        "node-id": 3020069200,
+        "node-name": "성성2교차로",
+        "smart-int-no": 5
+      },
+      "geometry": {
+        "coordinates": [
+          127.1216594653132,
+          36.8444807647969
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "los": "D",
+        "traffic_volume": [
+          2106,
+          1670
+        ],
+        "avg_delay": [
+          119.03,
+          119.2
+        ],
+        "avg_queue": [
+          81.55,
+          96.15
+        ],
+        "avg_fuel_consumption": [
+          408.43,
+          417.47
+        ],
+        "node-name": "삼성빌딩삼거리",
+        "smart-int-no": 6,
+        "node-id": 3020060300
+      },
+      "geometry": {
+        "coordinates": [
+          127.1192940430156,
+          36.839435883747626
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "los": "",
+        "traffic_volume": "",
+        "avg_delay": "",
+        "avg_queue": "",
+        "avg_fuel_consumption": "",
+        "node-id": 3020126100,
+        "smart-int-no": 46,
+        "node-name": "북부지하차도"
+      },
+      "geometry": {
+        "coordinates": [
+          127.13827478990294,
+          36.839045307780026
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "los": "",
+        "traffic_volume": "",
+        "avg_delay": "",
+        "avg_queue": "",
+        "avg_fuel_consumption": "",
+        "node-id": 3020157300,
+        "node-name": "두정고가차도",
+        "smart-int-no": 0
+      },
+      "geometry": {
+        "coordinates": [
+          127.1514120683957,
+          36.83894164347602
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "los": "",
+        "traffic_volume": "",
+        "avg_delay": "",
+        "avg_queue": "",
+        "avg_fuel_consumption": "",
+        "node-id": 3020069300,
+        "node-name": "백석리슈빌아파트사거리",
+        "smart-int-no": 0
+      },
+      "geometry": {
+        "coordinates": [
+          127.1216528099178,
+          36.83415334856578
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "los": "",
+        "traffic_volume": "",
+        "avg_delay": "",
+        "avg_queue": "",
+        "avg_fuel_consumption": "",
+        "node-id": 3020084100,
+        "node-name": "천안두정푸르지오5차아파트사거리",
+        "smart-int-no": 0
+      },
+      "geometry": {
+        "coordinates": [
+          127.12746794911016,
+          36.83398837411073
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "los": "",
+        "traffic_volume": "",
+        "avg_delay": "",
+        "avg_queue": "",
+        "avg_fuel_consumption": "",
+        "node-id": 3020106400,
+        "node-name": "두정도서관사거리",
+        "smart-int-no": 0
+      },
+      "geometry": {
+        "coordinates": [
+          127.13350291109748,
+          36.83382924981437
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "los": "",
+        "traffic_volume": "",
+        "avg_delay": "",
+        "avg_queue": "",
+        "avg_fuel_consumption": "",
+        "node-id": 3020125600,
+        "node-name": "현대자동차천안북부점앞",
+        "smart-int-no": 48
+      },
+      "geometry": {
+        "coordinates": [
+          127.1382081467633,
+          36.833736822105465
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "los": "",
+        "traffic_volume": "",
+        "avg_delay": "",
+        "avg_queue": "",
+        "avg_fuel_consumption": "",
+        "node-id": 3020137900,
+        "node-name": "두정디지털월드사거리",
+        "smart-int-no": 0
+      },
+      "geometry": {
+        "coordinates": [
+          127.14180791677342,
+          36.83350723492697
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "los": "",
+        "traffic_volume": "",
+        "avg_delay": "",
+        "avg_queue": "",
+        "avg_fuel_consumption": "",
+        "node-id": 3020149000,
+        "node-name": "천안시노동복지회관사거리",
+        "smart-int-no": 0
+      },
+      "geometry": {
+        "coordinates": [
+          127.14553639128292,
+          36.833274517943735
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "los": "",
+        "traffic_volume": "",
+        "avg_delay": "",
+        "avg_queue": "",
+        "avg_fuel_consumption": "",
+        "node-id": 3020157900,
+        "node-name": "포레나천안두정아파트사거리",
+        "smart-int-no": 0
+      },
+      "geometry": {
+        "coordinates": [
+          127.1518996180892,
+          36.83197621313643
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "los": "",
+        "traffic_volume": "",
+        "avg_delay": "",
+        "avg_queue": "",
+        "avg_fuel_consumption": "",
+        "node-id": 3020148300,
+        "node-name": "아트풋살장삼거리",
+        "smart-int-no": 0
+      },
+      "geometry": {
+        "coordinates": [
+          127.14513788681666,
+          36.82974997442567
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "los": "",
+        "traffic_volume": "",
+        "avg_delay": "",
+        "avg_queue": "",
+        "avg_fuel_consumption": "",
+        "node-id": 3020148300,
+        "node-name": "유강복합빌딩사거리",
+        "smart-int-no": 0
+      },
+      "geometry": {
+        "coordinates": [
+          127.14145316075042,
+          36.82999596968746
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "los": "",
+        "traffic_volume": "",
+        "avg_delay": "",
+        "avg_queue": "",
+        "avg_fuel_consumption": "",
+        "node-id": 3020124000,
+        "node-name": "통계청천안사무소앞",
+        "smart-int-no": 49
+      },
+      "geometry": {
+        "coordinates": [
+          127.1378771573352,
+          36.830278071897894
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "los": "",
+        "traffic_volume": "",
+        "avg_delay": "",
+        "avg_queue": "",
+        "avg_fuel_consumption": "",
+        "node-id": 3020105700,
+        "smart-int-no": 0,
+        "node-name": "천안성정동우체국사거리"
+      },
+      "geometry": {
+        "coordinates": [
+          127.13329460234257,
+          36.830382098600126
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "los": "",
+        "traffic_volume": "",
+        "avg_delay": "",
+        "avg_queue": "",
+        "avg_fuel_consumption": "",
+        "node-id": 3020104900,
+        "smart-int-no": 0,
+        "node-name": "서부대로사거리"
+      },
+      "geometry": {
+        "coordinates": [
+          127.13303862438318,
+          36.82654291959702
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "los": "",
+        "traffic_volume": "",
+        "avg_delay": "",
+        "avg_queue": "",
+        "avg_fuel_consumption": "",
+        "node-id": 3020121500,
+        "smart-int-no": 50,
+        "node-name": "시민문화여성회관사거리"
+      },
+      "geometry": {
+        "coordinates": [
+          127.13738835018631,
+          36.825880370186894
+        ],
+        "type": "Point"
+      },
+      "id": 23
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "los": "",
+        "traffic_volume": "",
+        "avg_delay": "",
+        "avg_queue": "",
+        "avg_fuel_consumption": "",
+        "node-id": 3020135000,
+        "node-name": "농협은행성정동지점앞",
+        "smart-int-no": 59
+      },
+      "geometry": {
+        "coordinates": [
+          127.14092044692285,
+          36.82559327042284
+        ],
+        "type": "Point"
+      },
+      "id": 24
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "los": "",
+        "traffic_volume": "",
+        "avg_delay": "",
+        "avg_queue": "",
+        "avg_fuel_consumption": "",
+        "node-id": 3020146900,
+        "node-name": "인쇄창사거리",
+        "smart-int-no": 60
+      },
+      "geometry": {
+        "coordinates": [
+          127.14455948812531,
+          36.82530583108014
+        ],
+        "type": "Point"
+      },
+      "id": 25
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "los": "",
+        "traffic_volume": "",
+        "avg_delay": "",
+        "avg_queue": "",
+        "avg_fuel_consumption": "",
+        "node-id": 3020082800,
+        "node-name": "한방병원삼거리",
+        "smart-int-no": 0
+      },
+      "geometry": {
+        "coordinates": [
+          127.1273228209298,
+          36.82473806807711
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "los": "",
+        "traffic_volume": "",
+        "avg_delay": "",
+        "avg_queue": "",
+        "avg_fuel_consumption": "",
+        "node-id": 3020061700,
+        "node-name": "천안백석LH천년나무1단지아파트사거리",
+        "smart-int-no": 0
+      },
+      "geometry": {
+        "coordinates": [
+          127.11967138704694,
+          36.82920894304476
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "los": "",
+        "traffic_volume": "",
+        "avg_delay": "",
+        "avg_queue": "",
+        "avg_fuel_consumption": "",
+        "node-id": 3020075400,
+        "node-name": "백석충전소",
+        "smart-int-no": 0
+      },
+      "geometry": {
+        "coordinates": [
+          127.12385726151786,
+          36.82359958777623
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "los": "",
+        "traffic_volume": "",
+        "avg_delay": "",
+        "avg_queue": "",
+        "avg_fuel_consumption": "",
+        "node-id": 3020057900,
+        "node-name": "한들네거리",
+        "smart-int-no": 0
+      },
+      "geometry": {
+        "coordinates": [
+          127.11826990902085,
+          36.822928832049385
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "los": "C",
+        "traffic_volume": [
+          2045,
+          2626
+        ],
+        "avg_delay": [
+          124.55,
+          101.74
+        ],
+        "avg_queue": [
+          102.34,
+          110.78
+        ],
+        "avg_fuel_consumption": [
+          456.46,
+          448.18
+        ],
+        "node-id": 3020046900,
+        "smart-int-no": 7,
+        "node-name": "천안브라운스톤아파트114동앞"
+      },
+      "geometry": {
+        "coordinates": [
+          127.11470363704859,
+          36.830429530326185
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "los": "D",
+        "traffic_volume": [
+          1478,
+          1006
+        ],
+        "avg_delay": [
+          124.7,
+          114.29
+        ],
+        "avg_queue": [
+          56.19,
+          90.21
+        ],
+        "avg_fuel_consumption": [
+          384.98,
+          206.95
+        ],
+        "node-id": 3020042300,
+        "smart-int-no": 8,
+        "node-name": "운동장사거리"
+      },
+      "geometry": {
+        "coordinates": [
+          127.11193422620937,
+          36.82284837971112
+        ],
+        "type": "Point"
+      },
+      "id": 31
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "los": "",
+        "traffic_volume": "",
+        "avg_delay": "",
+        "avg_queue": "",
+        "avg_fuel_consumption": "",
+        "node-id": 3020056500,
+        "node-name": "유관순체육관네거리",
+        "smart-int-no": 0
+      },
+      "geometry": {
+        "coordinates": [
+          127.11787640721161,
+          36.821412941901784
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "los": "",
+        "traffic_volume": "",
+        "avg_delay": "",
+        "avg_queue": "",
+        "avg_fuel_consumption": "",
+        "node-id": 3020052400,
+        "node-name": "시청동문삼거리",
+        "smart-int-no": 0
+      },
+      "geometry": {
+        "coordinates": [
+          127.1163810263314,
+          36.81593057992556
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "los": "",
+        "traffic_volume": "",
+        "avg_delay": "",
+        "avg_queue": "",
+        "avg_fuel_consumption": "",
+        "node-id": 3020048000,
+        "node-name": "검은돌길삼거리",
+        "smart-int-no": 0
+      },
+      "geometry": {
+        "coordinates": [
+          127.11496611125551,
+          36.81123745660324
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "los": "E",
+        "traffic_volume": [
+          1961,
+          1324
+        ],
+        "avg_delay": [
+          129.54,
+          123.98
+        ],
+        "avg_queue": [
+          62.63,
+          130.28
+        ],
+        "avg_fuel_consumption": [
+          417.63,
+          471.78
+        ],
+        "node-id": 3020038000,
+        "node-name": "시청앞사거리",
+        "smart-int-no": 9
+      },
+      "geometry": {
+        "coordinates": [
+          127.10966302237944,
+          36.815586360748284
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "los": "C",
+        "traffic_volume": [
+          2819,
+          2400
+        ],
+        "avg_delay": [
+          145.41,
+          49.28
+        ],
+        "avg_queue": [
+          171.36,
+          66.17
+        ],
+        "avg_fuel_consumption": [
+          284.29,
+          271.22
+        ],
+        "node-id": 3020036600,
+        "smart-int-no": 10,
+        "node-name": "번영로근린광장앞"
+      },
+      "geometry": {
+        "coordinates": [
+          127.10876209213751,
+          36.812505282567784
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "los": "C",
+        "traffic_volume": [
+          2592,
+          2850
+        ],
+        "avg_delay": [
+          73.16,
+          182.88
+        ],
+        "avg_queue": [
+          153.2,
+          152.17
+        ],
+        "avg_fuel_consumption": [
+          487.21,
+          401.9
+        ],
+        "smart-int-no": 11,
+        "node-name": "불당아이파크아파트105동앞",
+        "node-id": 3020034200
+      },
+      "geometry": {
+        "coordinates": [
+          127.1072684971561,
+          36.807516564486164
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "los": "",
+        "traffic_volume": "",
+        "avg_delay": "",
+        "avg_queue": "",
+        "avg_fuel_consumption": "",
+        "node-name": "불당행복센터사거리",
+        "node-id": 3020045000,
+        "smart-int-no": 0
+      },
+      "geometry": {
+        "coordinates": [
+          127.11347506904536,
+          36.80626513855124
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "los": "B",
+        "traffic_volume": [
+          2172,
+          2961
+        ],
+        "avg_delay": [
+          113.38,
+          136.64
+        ],
+        "avg_queue": [
+          94.5,
+          105.31
+        ],
+        "avg_fuel_consumption": [
+          140.72,
+          410.09
+        ],
+        "node-name": "갤러리아사거리",
+        "smart-int-no": 12,
+        "node-id": 3020030800
+      },
+      "geometry": {
+        "coordinates": [
+          127.1054895713093,
+          36.801553598517074
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "los": "A",
+        "traffic_volume": [
+          2651,
+          2631
+        ],
+        "avg_delay": [
+          185.34,
+          161.4
+        ],
+        "avg_queue": [
+          133.91,
+          174.85
+        ],
+        "avg_fuel_consumption": [
+          177.92,
+          130.09
+        ],
+        "node-name": "월봉중사거리",
+        "smart-int-no": 15,
+        "node-id": 3020042400
+      },
+      "geometry": {
+        "coordinates": [
+          127.11215390093798,
+          36.801876449022586
+        ],
+        "type": "Point"
+      },
+      "id": 40
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "los": "",
+        "traffic_volume": "",
+        "avg_delay": "",
+        "avg_queue": "",
+        "avg_fuel_consumption": "",
+        "node-id": 2881889310,
+        "node-name": "이마트트레이더스사거리",
+        "smart-int-no": 0
+      },
+      "geometry": {
+        "coordinates": [
+          127.10644465620356,
+          36.79709751459036
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "los": "",
+        "traffic_volume": "",
+        "avg_delay": "",
+        "avg_queue": "",
+        "avg_fuel_consumption": "",
+        "node-id": 2881889610,
+        "node-name": "한국표준협회삼거리",
+        "smart-int-no": 0
+      },
+      "geometry": {
+        "coordinates": [
+          127.10767996643699,
+          36.79216721836663
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "los": "",
+        "traffic_volume": "",
+        "avg_delay": "",
+        "avg_queue": "",
+        "avg_fuel_consumption": "",
+        "node-id": 2881889810,
+        "node-name": "장재마을사거리",
+        "smart-int-no": 0
+      },
+      "geometry": {
+        "coordinates": [
+          127.10888079327833,
+          36.78751340071118
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "los": "",
+        "traffic_volume": "",
+        "avg_delay": "",
+        "avg_queue": "",
+        "avg_fuel_consumption": "",
+        "node-id": 2881885500,
+        "node-name": "장재2교차로",
+        "smart-int-no": 0
+      },
+      "geometry": {
+        "coordinates": [
+          127.10970934475421,
+          36.7844320282708
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "los": "",
+        "traffic_volume": "",
+        "avg_delay": "",
+        "avg_queue": "",
+        "avg_fuel_consumption": "",
+        "node-id": 3020098300,
+        "node-name": "백석사거리",
+        "smart-int-no": 0
+      },
+      "geometry": {
+        "coordinates": [
+          127.13126213005279,
+          36.81925024081522
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "los": "",
+        "traffic_volume": "",
+        "avg_delay": "",
+        "avg_queue": "",
+        "avg_fuel_consumption": "",
+        "node-id": 3010038400,
+        "node-name": "봉서초사거리",
+        "smart-int-no": 0
+      },
+      "geometry": {
+        "coordinates": [
+          127.13011533748642,
+          36.814586908187124
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "los": "",
+        "traffic_volume": "",
+        "avg_delay": "",
+        "avg_queue": "",
+        "avg_fuel_consumption": "",
+        "node-id": 3020088200,
+        "node-name": "시영1차아파트사거리",
+        "smart-int-no": 0
+      },
+      "geometry": {
+        "coordinates": [
+          127.12850092528822,
+          36.80793574776166
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "los": "C",
+        "traffic_volume": [
+          1384,
+          1622
+        ],
+        "avg_delay": [
+          53.9,
+          164.36
+        ],
+        "avg_queue": [
+          134.61,
+          168.61
+        ],
+        "avg_fuel_consumption": [
+          138.23,
+          426.8
+        ],
+        "node-id": 3020081700,
+        "smart-int-no": 20,
+        "node-name": "쌍용동사거리"
+      },
+      "geometry": {
+        "coordinates": [
+          127.12655712477607,
+          36.799875234192655
+        ],
+        "type": "Point"
+      },
+      "id": 48
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "los": "E",
+        "traffic_volume": [
+          1532,
+          1140
+        ],
+        "avg_delay": [
+          40.62,
+          159.84
+        ],
+        "avg_queue": [
+          189.42,
+          190.51
+        ],
+        "avg_fuel_consumption": [
+          496.87,
+          402.06
+        ],
+        "node-id": 3020049500,
+        "smart-int-no": 16,
+        "node-name": "쌍용도서관삼거리"
+      },
+      "geometry": {
+        "coordinates": [
+          127.11538011634048,
+          36.8015036745892
+        ],
+        "type": "Point"
+      },
+      "id": 49
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "los": "C",
+        "traffic_volume": [
+          2563,
+          2328
+        ],
+        "avg_delay": [
+          131.56,
+          37.05
+        ],
+        "avg_queue": [
+          117.64,
+          152.92
+        ],
+        "avg_fuel_consumption": [
+          213.29,
+          194.6
+        ],
+        "node-id": 3020058800,
+        "node-name": "용암사거리",
+        "smart-int-no": 17
+      },
+      "geometry": {
+        "coordinates": [
+          127.11852558210285,
+          36.80112394867683
+        ],
+        "type": "Point"
+      },
+      "id": 50
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "los": "B",
+        "traffic_volume": [
+          2265,
+          2527
+        ],
+        "avg_delay": [
+          126.11,
+          73.72
+        ],
+        "avg_queue": [
+          88.66,
+          56.64
+        ],
+        "avg_fuel_consumption": [
+          131.28,
+          201.23
+        ],
+        "node-name": "이마트24천안쌍용제일점앞",
+        "smart-int-no": 18,
+        "node-id": 3020069500
+      },
+      "geometry": {
+        "coordinates": [
+          127.12167182866608,
+          36.800685946397664
+        ],
+        "type": "Point"
+      },
+      "id": 51
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "los": "F",
+        "traffic_volume": [
+          2018,
+          1588
+        ],
+        "avg_delay": [
+          32.39,
+          181.33
+        ],
+        "avg_queue": [
+          57.37,
+          62.46
+        ],
+        "avg_fuel_consumption": [
+          119.3,
+          138.7
+        ],
+        "node-name": "쌍용초사거리",
+        "smart-int-no": 19,
+        "node-id": 3020073200
+      },
+      "geometry": {
+        "coordinates": [
+          127.12345186642426,
+          36.800391148463675
+        ],
+        "type": "Point"
+      },
+      "id": 52
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "los": "",
+        "traffic_volume": "",
+        "avg_delay": "",
+        "avg_queue": "",
+        "avg_fuel_consumption": "",
+        "node-name": "구상골사거리",
+        "node-id": 3020114900,
+        "smart-int-no": 53
+      },
+      "geometry": {
+        "coordinates": [
+          127.1356056675844,
+          36.818430232377125
+        ],
+        "type": "Point"
+      },
+      "id": 53
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "los": "",
+        "traffic_volume": "",
+        "avg_delay": "",
+        "avg_queue": "",
+        "avg_fuel_consumption": "",
+        "node-id": 3010047500,
+        "node-name": "골프존파크앞",
+        "smart-int-no": 54
+      },
+      "geometry": {
+        "coordinates": [
+          127.13445179572136,
+          36.81386665919804
+        ],
+        "type": "Point"
+      },
+      "id": 54
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "los": "",
+        "traffic_volume": "",
+        "avg_delay": "",
+        "avg_queue": "",
+        "avg_fuel_consumption": "",
+        "node-id": 3020103600,
+        "node-name": "천안계광중학교앞",
+        "smart-int-no": 56
+      },
+      "geometry": {
+        "coordinates": [
+          127.1327321532649,
+          36.80733587253141
+        ],
+        "type": "Point"
+      },
+      "id": 55
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "los": "",
+        "traffic_volume": "",
+        "avg_delay": "",
+        "avg_queue": "",
+        "avg_fuel_consumption": "",
+        "node-id": 3020094100,
+        "smart-int-no": 21,
+        "node-name": "일봉산사거리"
+      },
+      "geometry": {
+        "coordinates": [
+          127.13044968382906,
+          36.79790288430429
+        ],
+        "type": "Point"
+      },
+      "id": 56
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "los": "",
+        "traffic_volume": "",
+        "avg_delay": "",
+        "avg_queue": "",
+        "avg_fuel_consumption": "",
+        "node-name": "방아다리사거리",
+        "smart-int-no": 27,
+        "node-id": 3020082700
+      },
+      "geometry": {
+        "coordinates": [
+          127.12701935289891,
+          36.79474465587461
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "los": "",
+        "traffic_volume": "",
+        "avg_delay": "",
+        "avg_queue": "",
+        "avg_fuel_consumption": "",
+        "node-name": "신방삼거리",
+        "smart-int-no": 22,
+        "node-id": 3010029100
+      },
+      "geometry": {
+        "coordinates": [
+          127.11803556410797,
+          36.78620208792735
+        ],
+        "type": "Point"
+      },
+      "id": 58
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "los": "",
+        "traffic_volume": "",
+        "avg_delay": "",
+        "avg_queue": "",
+        "avg_fuel_consumption": "",
+        "node-name": "새말사거리",
+        "smart-int-no": 33,
+        "node-id": 3010036400
+      },
+      "geometry": {
+        "coordinates": [
+          127.12863969639983,
+          36.786081813957736
+        ],
+        "type": "Point"
+      },
+      "id": 59
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "los": "",
+        "traffic_volume": "",
+        "avg_delay": "",
+        "avg_queue": "",
+        "avg_fuel_consumption": "",
+        "node-id": 3020097200,
+        "node-name": "차돌길삼거리",
+        "smart-int-no": 58
+      },
+      "geometry": {
+        "coordinates": [
+          127.13134480569687,
+          36.79924615499537
+        ],
+        "type": "Point"
+      },
+      "id": 60
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "los": "",
+        "traffic_volume": "",
+        "avg_delay": "",
+        "avg_queue": "",
+        "avg_fuel_consumption": "",
+        "node-name": "봉정사거리",
+        "smart-int-no": 0,
+        "node-id": 3020141300
+      },
+      "geometry": {
+        "coordinates": [
+          127.14285248391849,
+          36.81855322296556
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "los": "",
+        "traffic_volume": "",
+        "avg_delay": "",
+        "avg_queue": "",
+        "avg_fuel_consumption": "",
+        "node-name": "성정사거리",
+        "smart-int-no": 0,
+        "node-id": 3020137500
+      },
+      "geometry": {
+        "coordinates": [
+          127.14166416904766,
+          36.81359032273737
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "los": "",
+        "traffic_volume": "",
+        "avg_delay": "",
+        "avg_queue": "",
+        "avg_fuel_consumption": "",
+        "node-name": "천고사거리",
+        "smart-int-no": 0,
+        "node-id": 3010055300
+      },
+      "geometry": {
+        "coordinates": [
+          127.13998305602934,
+          36.80687347038821
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "los": "",
+        "traffic_volume": "",
+        "avg_delay": "",
+        "avg_queue": "",
+        "avg_fuel_consumption": "",
+        "node-name": "일봉빌딩앞",
+        "smart-int-no": 28,
+        "node-id": 3020142100
+      },
+      "geometry": {
+        "coordinates": [
+          127.14285603269622,
+          36.79852828226255
+        ],
+        "type": "Point"
+      },
+      "id": 64
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "los": "",
+        "traffic_volume": "",
+        "avg_delay": "",
+        "avg_queue": "",
+        "avg_fuel_consumption": "",
+        "node-name": "청수회전교차로",
+        "smart-int-no": 0,
+        "node-id": 3010061600
+      },
+      "geometry": {
+        "coordinates": [
+          127.14753069755699,
+          36.78889827696959
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "los": "",
+        "traffic_volume": "",
+        "avg_delay": "",
+        "avg_queue": "",
+        "avg_fuel_consumption": "",
+        "node-name": "버들마을우미린아파트307동앞",
+        "smart-int-no": 34,
+        "node-id": 3010060900
+      },
+      "geometry": {
+        "coordinates": [
+          127.14584912442336,
+          36.782632932482784
+        ],
+        "type": "Point"
+      },
+      "id": 66
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "los": "",
+        "traffic_volume": "",
+        "avg_delay": "",
+        "avg_queue": "",
+        "avg_fuel_consumption": "",
+        "node-name": "역말오거리",
+        "smart-int-no": 37,
+        "node-id": 3010068300
+      },
+      "geometry": {
+        "coordinates": [
+          127.15308752996617,
+          36.82477489019466
+        ],
+        "type": "Point"
+      },
+      "id": 67
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "los": "",
+        "traffic_volume": "",
+        "avg_delay": "",
+        "avg_queue": "",
+        "avg_fuel_consumption": "",
+        "node-name": "방죽안오거리",
+        "smart-int-no": 13,
+        "node-id": 3010066200
+      },
+      "geometry": {
+        "coordinates": [
+          127.15215464806045,
+          36.818648098095096
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "los": "",
+        "traffic_volume": "",
+        "avg_delay": "",
+        "avg_queue": "",
+        "avg_fuel_consumption": "",
+        "node-name": "혜강병원사거리",
+        "smart-int-no": 0,
+        "node-id": 3010063000
+      },
+      "geometry": {
+        "coordinates": [
+          127.14932366697184,
+          36.813102071908474
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "los": "",
+        "traffic_volume": "",
+        "avg_delay": "",
+        "avg_queue": "",
+        "avg_fuel_consumption": "",
+        "node-name": "천안초사거리",
+        "smart-int-no": 0,
+        "node-id": 3010068100
+      },
+      "geometry": {
+        "coordinates": [
+          127.1529251340969,
+          36.81250189947258
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "los": "",
+        "traffic_volume": "",
+        "avg_delay": "",
+        "avg_queue": "",
+        "avg_fuel_consumption": "",
+        "node-name": "천안역앞교차로",
+        "smart-int-no": 0,
+        "node-id": 3010062400
+      },
+      "geometry": {
+        "coordinates": [
+          127.14811517458656,
+          36.809387018292995
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "los": "",
+        "traffic_volume": "",
+        "avg_delay": "",
+        "avg_queue": "",
+        "avg_fuel_consumption": "",
+        "node-name": "버들육거리",
+        "smart-int-no": 0,
+        "node-id": 3010066300
+      },
+      "geometry": {
+        "coordinates": [
+          127.15228072113626,
+          36.80626948220184
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "los": "",
+        "traffic_volume": "",
+        "avg_delay": "",
+        "avg_queue": "",
+        "avg_fuel_consumption": "",
+        "node-name": "대흥제1공영주차장앞삼거리",
+        "smart-int-no": 0,
+        "node-id": "none_node"
+      },
+      "geometry": {
+        "coordinates": [
+          127.14716022628738,
+          36.806488851555756
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "los": "",
+        "traffic_volume": "",
+        "avg_delay": "",
+        "avg_queue": "",
+        "avg_fuel_consumption": "",
+        "node-name": "남부오거리",
+        "smart-int-no": 29,
+        "node-id": 3010069600
+      },
+      "geometry": {
+        "coordinates": [
+          127.15368390376324,
+          36.79843480049098
+        ],
+        "type": "Point"
+      },
+      "id": 74
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "los": "",
+        "traffic_volume": "",
+        "avg_delay": "",
+        "avg_queue": "",
+        "avg_fuel_consumption": "",
+        "node-name": "터미널사거리",
+        "smart-int-no": 14,
+        "node-id": 3010076200
+      },
+      "geometry": {
+        "coordinates": [
+          127.15824904914643,
+          36.818984206723584
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "los": "",
+        "traffic_volume": "",
+        "avg_delay": "",
+        "avg_queue": "",
+        "avg_fuel_consumption": "",
+        "node-name": "천안중앙고사거리",
+        "smart-int-no": 0,
+        "node-id": 3010076300
+      },
+      "geometry": {
+        "coordinates": [
+          127.15831988764876,
+          36.8124040419265
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "los": "",
+        "traffic_volume": "",
+        "avg_delay": "",
+        "avg_queue": "",
+        "avg_fuel_consumption": "",
+        "node-name": "교보사거리",
+        "smart-int-no": 0,
+        "node-id": 3010077400
+      },
+      "geometry": {
+        "coordinates": [
+          127.15875061714428,
+          36.8063391995145
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "los": "",
+        "traffic_volume": "",
+        "avg_delay": "",
+        "avg_queue": "",
+        "avg_fuel_consumption": "",
+        "node-name": "충무로사거리",
+        "smart-int-no": 30,
+        "node-id": 3010078900
+      },
+      "geometry": {
+        "coordinates": [
+          127.15929505764535,
+          36.798647344748105
+        ],
+        "type": "Point"
+      },
+      "id": 78
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "los": "",
+        "traffic_volume": "",
+        "avg_delay": "",
+        "avg_queue": "",
+        "avg_fuel_consumption": "",
+        "node-name": "천안로사거리",
+        "smart-int-no": 38,
+        "node-id": 3010085300
+      },
+      "geometry": {
+        "coordinates": [
+          127.16252198477991,
+          36.821469035519854
+        ],
+        "type": "Point"
+      },
+      "id": 79
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "los": "",
+        "traffic_volume": "",
+        "avg_delay": "",
+        "avg_queue": "",
+        "avg_fuel_consumption": "",
+        "node-id": 3010087900,
+        "node-name": "구성삼거리",
+        "smart-int-no": 42
+      },
+      "geometry": {
+        "coordinates": [
+          127.16443472415932,
+          36.798847230496776
+        ],
+        "type": "Point"
+      },
+      "id": 80
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "los": "",
+        "traffic_volume": "",
+        "avg_delay": "",
+        "avg_queue": "",
+        "avg_fuel_consumption": "",
+        "smart-int-no": 0,
+        "node-name": "충절오거리",
+        "node-id": 3010080100
+      },
+      "geometry": {
+        "coordinates": [
+          127.15959648221855,
+          36.79448397747068
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "los": "",
+        "traffic_volume": "",
+        "avg_delay": "",
+        "avg_queue": "",
+        "avg_fuel_consumption": "",
+        "node-name": "삼룡삼거리",
+        "smart-int-no": 44,
+        "node-id": 3010088800
+      },
+      "geometry": {
+        "coordinates": [
+          127.16487670674064,
+          36.78893900087114
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "los": "",
+        "traffic_volume": "",
+        "avg_delay": "",
+        "avg_queue": "",
+        "avg_fuel_consumption": "",
+        "smart-int-no": 35,
+        "node-name": "파리바게뜨청당신도시점앞",
+        "node-id": 3010067000
+      },
+      "geometry": {
+        "coordinates": [
+          127.15248127911588,
+          36.78184110903764
+        ],
+        "type": "Point"
+      },
+      "id": 83
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "los": "",
+        "traffic_volume": "",
+        "avg_delay": "",
+        "avg_queue": "",
+        "avg_fuel_consumption": "",
+        "smart-int-no": 36,
+        "node-name": "태경빌딩앞",
+        "node-id": 3010076700
+      },
+      "geometry": {
+        "coordinates": [
+          127.15841648996661,
+          36.781165298547165
+        ],
+        "type": "Point"
+      },
+      "id": 84
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "los": "",
+        "traffic_volume": "",
+        "avg_delay": "",
+        "avg_queue": "",
+        "avg_fuel_consumption": "",
+        "node-name": "청삼교차로",
+        "smart-int-no": 45,
+        "node-id": 3010089600
+      },
+      "geometry": {
+        "coordinates": [
+          127.16542052619923,
+          36.781705290756236
+        ],
+        "type": "Point"
+      },
+      "id": 85
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "los": "",
+        "traffic_volume": "",
+        "avg_delay": "",
+        "avg_queue": "",
+        "avg_fuel_consumption": "",
+        "node-name": "한국도로공사천안지사사거리",
+        "smart-int-no": 0,
+        "node-id": 3010090000
+      },
+      "geometry": {
+        "coordinates": [
+          127.16666816506034,
+          36.82824519512958
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "los": "",
+        "traffic_volume": "",
+        "avg_delay": "",
+        "avg_queue": "",
+        "avg_fuel_consumption": "",
+        "node-name": "안서동삼거리",
+        "smart-int-no": 0,
+        "node-id": 3010092600
+      },
+      "geometry": {
+        "coordinates": [
+          127.17231706593827,
+          36.83188837334576
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "los": "",
+        "traffic_volume": "",
+        "avg_delay": "",
+        "avg_queue": "",
+        "avg_fuel_consumption": "",
+        "node-name": "단국대병원삼거리",
+        "smart-int-no": 0,
+        "node-id": 3010093800
+      },
+      "geometry": {
+        "coordinates": [
+          127.17459690167567,
+          36.84098681902363
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "los": "",
+        "traffic_volume": "",
+        "avg_delay": "",
+        "avg_queue": "",
+        "avg_fuel_consumption": "",
+        "smart-int-no": "동부사거리",
+        "node-name": 39,
+        "node-id": 3010088200
+      },
+      "geometry": {
+        "coordinates": [
+          127.1645379960438,
+          36.81016129448227
+        ],
+        "type": "Point"
+      },
+      "id": 89
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "los": "",
+        "traffic_volume": "",
+        "avg_delay": "",
+        "avg_queue": "",
+        "avg_fuel_consumption": "",
+        "node-id": 3020100500,
+        "smart-int-no": "나이키천안쌍용점앞",
+        "node-name": 57
+      },
+      "geometry": {
+        "coordinates": [
+          127.1319060393268,
+          36.802823579048805
+        ],
+        "type": "Point"
+      },
+      "id": 90
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "los": "",
+        "traffic_volume": "",
+        "avg_delay": "",
+        "avg_queue": "",
+        "avg_fuel_consumption": "",
+        "node-name": 55,
+        "smart-int-no": "오일뱅크쌍용대로지점앞",
+        "node-id": 3010045200
+      },
+      "geometry": {
+        "coordinates": [
+          127.13331230827868,
+          36.80987821215663
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "los": "",
+        "traffic_volume": "",
+        "avg_delay": "",
+        "avg_queue": "",
+        "avg_fuel_consumption": "",
+        "smart-int-no": "자전거스페이스앞",
+        "node-name": 52,
+        "node-id": 3020117900
+      },
+      "geometry": {
+        "coordinates": [
+          127.13648035623345,
+          36.82204514894789
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "los": "",
+        "traffic_volume": "",
+        "avg_delay": "",
+        "avg_queue": "",
+        "avg_fuel_consumption": "",
+        "smart-int-no": "홈플러스익스프레스천안성정점앞",
+        "node-name": 51,
+        "node-id": 3020118900
+      },
+      "geometry": {
+        "coordinates": [
+          127.1367539119102,
+          36.82308704038833
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "los": "",
+        "traffic_volume": "",
+        "avg_delay": "",
+        "avg_queue": "",
+        "avg_fuel_consumption": "",
+        "smart-int-no": "GS25두정우리점앞",
+        "node-name": 47,
+        "node-id": 3020125900
+      },
+      "geometry": {
+        "coordinates": [
+          127.13827123437852,
+          36.83562948476174
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "los": "",
+        "traffic_volume": "",
+        "avg_delay": "",
+        "avg_queue": "",
+        "avg_fuel_consumption": "",
+        "node-name": 40,
+        "smart-int-no": "도로원점삼거리",
+        "node-id": 3010087200
+      },
+      "geometry": {
+        "coordinates": [
+          127.16427318222878,
+          36.80637036814673
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "los": "",
+        "traffic_volume": "",
+        "avg_delay": "",
+        "avg_queue": "",
+        "avg_fuel_consumption": "",
+        "node-name": 41,
+        "smart-int-no": "고재사거리",
+        "node-id": 3010087400
+      },
+      "geometry": {
+        "coordinates": [
+          127.16426636195996,
+          36.80144219426933
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "los": "",
+        "traffic_volume": "",
+        "avg_delay": "",
+        "avg_queue": "",
+        "avg_fuel_consumption": "",
+        "node-name": 43,
+        "smart-int-no": "굴울사거리",
+        "node-id": 3010088400
+      },
+      "geometry": {
+        "coordinates": [
+          127.16477406446677,
+          36.791225367920575
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "los": "",
+        "traffic_volume": "",
+        "avg_delay": "",
+        "avg_queue": "",
+        "avg_fuel_consumption": "",
+        "node-name": 32,
+        "smart-int-no": "하신삼거리",
+        "node-id": 3010032800
+      },
+      "geometry": {
+        "coordinates": [
+          127.1241101377862,
+          36.78627586068413
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "los": "",
+        "traffic_volume": "",
+        "avg_delay": "",
+        "avg_queue": "",
+        "avg_fuel_consumption": "",
+        "node-name": 23,
+        "smart-int-no": "삼일원앙아파트앞",
+        "node-id": 3010029900
+      },
+      "geometry": {
+        "coordinates": [
+          127.11933935743411,
+          36.78937812465725
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "los": "",
+        "traffic_volume": "",
+        "avg_delay": "",
+        "avg_queue": "",
+        "avg_fuel_consumption": "",
+        "node-name": 24,
+        "smart-int-no": "삼성미라클의원앞",
+        "node-id": 3020068800
+      },
+      "geometry": {
+        "coordinates": [
+          127.12139812756226,
+          36.79234182693213
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "los": "",
+        "traffic_volume": "",
+        "avg_delay": "",
+        "avg_queue": "",
+        "avg_fuel_consumption": "",
+        "node-name": 25,
+        "smart-int-no": "쌍용역교차로",
+        "node-id": 3020073900
+      },
+      "geometry": {
+        "coordinates": [
+          127.12336935126035,
+          36.79319005930607
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "los": "",
+        "traffic_volume": "",
+        "avg_delay": "",
+        "avg_queue": "",
+        "avg_fuel_consumption": "",
+        "smart-int-no": "우리척병원앞",
+        "node-name": 26,
+        "node-id": 3020078000
+      },
+      "geometry": {
+        "coordinates": [
+          127.12502596128223,
+          36.79358391749338
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "los": "",
+        "traffic_volume": "",
+        "avg_delay": "",
+        "avg_queue": "",
+        "avg_fuel_consumption": "",
+        "node-name": 31,
+        "smart-int-no": "한성빌딩앞",
+        "node-id": 3010084400
+      },
+      "geometry": {
+        "coordinates": [
+          127.16184628783003,
+          36.79874766678989
+        ],
+        "type": "Point"
+      }
+    }
+  ]
+}
