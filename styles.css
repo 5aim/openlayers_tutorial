@@ -42,3 +42,45 @@ body {
     border-bottom-left-radius: 14px;
     border-bottom-right-radius: 14px;
 }
+
+/* Controls */
+
+.ol-control button {
+    background-color: rgba(30, 115, 65, 0.4);
+}
+
+.ol-control button:hover {
+    background-color: rgba(30, 115, 65, 1);
+}
+
+.ol-zoom {
+    margin-left: 10px;
+}
+
+.ol-zoom .ol-zoom-in {
+    border-radius: 50%;
+}
+
+.ol-zoom .ol-zoom-out {
+    border-radius: 50%;
+}
+
+.ol-scale-bar {
+    margin-bottom: 2%;
+}
+
+.ol-overviewmap {
+    margin-bottom: 70px;
+}
+
+.btn-success {
+    background-color: rgba(250, 250, 250, 1);
+    border: 1px solid rgba(150, 150, 150, 1);
+    border-radius: 5px;
+}
+
+.btn-default {
+    background-color: rgba(150, 150, 150, 1);
+    border: 1px solid rgba(50, 50, 50, 1);
+    border-radius: 5px;
+}

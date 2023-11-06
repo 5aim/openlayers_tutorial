@@ -17,6 +17,7 @@ function init() {
   const fullscreenControl = new ol.control.FullScreen();
   const mousePositionControl = new ol.control.MousePosition();
   const overViewMapControl = new ol.control.OverviewMap({
+    tipLabel: 'Custom Overview Map',
     collapsed: false,
     layers: [
       new ol.layer.Tile({
@@ -25,8 +26,17 @@ function init() {
     ],
   });
   
-  const scaleLineControl = new ol.control.ScaleLine();
+  const scaleLineControl = new ol.control.ScaleLine({
+    units: 'metric',
+    minWidth: 200,
+    bar: true,
+    steps: 6,
+    text: true
+  });
+  
   const zoomSliderControl = new ol.control.ZoomSlider();
+  
+  const mapControls = [overViewMapControl, scaleLineControl, zoomSliderControl]
 
   // Map Object
   const map = new ol.Map({
@@ -43,15 +53,7 @@ function init() {
     // 컨트롤 지정
     target: "js-map",
     keyboardEventTarget: document,
-    controls: ol.control
-      .defaults()
-      .extend([
-        fullscreenControl,
-        mousePositionControl,
-        overViewMapControl,
-        scaleLineControl,
-        zoomSliderControl,
-      ]),
+    controls: ol.control.defaults({attribution: false}).extend(mapControls)
     })
     map.on('click', function(e){
       console.log(e.coordinate);
@@ -365,5 +367,32 @@ function init() {
       );
     };
   })
+
+  // Switch On/Off Controls Logic
+  const controlButtonElements = document.querySelectorAll('.sidebar > button[type=button]')
+  for(let controlButton of controlButtonElements){
+    controlButton.addEventListener('click', function(e){
+      let buttonElement = e.target;
+      if(buttonElement.className === 'btn-success'){
+        map.getControls().forEach(function(controlElement){
+          if(controlElement instanceof ol.control[buttonElement.innerHTML]){
+            map.removeControl(controlElement);
+          }
+        })
+        buttonElement.className = buttonElement.className.replace(
+          'btn-success', 'btn-default'
+        );
+      } else {
+        mapControls.forEach(function(controlElement){
+          if(controlElement instanceof ol.control[buttonElement.innerHTML]){
+            map.addControl(controlElement);
+          }
+        })
+        buttonElement.className = buttonElement.className.replace(
+          'btn-default', 'btn-success'
+        );
+      }
+    })
+  }
 }
 
