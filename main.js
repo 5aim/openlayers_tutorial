@@ -386,7 +386,7 @@ function init() {
         mapControls.forEach(function(controlElement){
           if(controlElement instanceof ol.control[buttonElement.innerHTML]){
             map.addControl(controlElement);
-          }
+          }  
         })
         buttonElement.className = buttonElement.className.replace(
           'btn-default', 'btn-success'
@@ -394,5 +394,24 @@ function init() {
       }
     })
   }
+
+  // Geolocation API
+  const viewProjection = map.getView().getProjection();
+  const geolocation = new ol.Geolocation({
+    tracking: true,
+    trackingOptions: {
+      enableHighAccuracy: true
+    },
+    projection: viewProjection
+  })
+
+  const geolocationElement = document.getElementById('geolocation');
+  geolocation.on('change:position', function(e){
+    // console.log(e.target.getPosition());
+    let geolocation = this.getPosition();
+    let LonLatGeolocation = ol.proj.toLonLat(geolocation, viewProjection);
+    map.getView().setCenter(geolocation);
+    geolocationElement.innerHTML = 'Longitude :' + LonLatGeolocation[0].toFixed(2) + ',' + 'Latitude :' + LonLatGeolocation[1].toFixed(2);
+  })
 }
 
